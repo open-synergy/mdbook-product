@@ -6,7 +6,7 @@
 
 #### <a name="field-name">Hazard Statement</a>
 
-Mendefinisikan pernyataan bahaya
+Mendefinisikan *Hazard Statement*(pernyataan bahaya)
 
 #### <a name="field-image">Image</a>
 
