@@ -2,7 +2,7 @@
 
 ### <a name="bagian-header">HEADER</a>
 
-![](../../img/uom/form.png)
+![](../img/uom/form.png)
 
 #### <a name="field-name">Unit of Measure</a>
 
