@@ -1,6 +1,6 @@
 # Membuat Data UoM
 
-1. Buka menu **Product -> Unit of Measure -> Unit of Measure**
+1. Buka menu **Product -> Configuration -> Unit of Measure -> Unit of Measure**
 2. Klik tombol **Create** pada bagian atas-kiri form.
 
 ![](../../img/uom/tombol-create.png)
