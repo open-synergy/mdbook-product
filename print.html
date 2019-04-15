@@ -1,0 +1,1162 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Odoo - Product Management</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="product.html"><strong aria-hidden="true">1.</strong> Product</a></li><li><ol class="section"><li><a href="product/penjelasan.html"><strong aria-hidden="true">1.1.</strong> Penjelasan</a></li><li><a href="product/membuat-data-product-template.html"><strong aria-hidden="true">1.2.</strong> Membuat Data Product Template</a></li></ol></li><li><a href="pricelist.html"><strong aria-hidden="true">2.</strong> Pricelist</a></li><li><ol class="section"><li><a href="pricelist/purchase-pricelist.html"><strong aria-hidden="true">2.1.</strong> Purchase Pricelist</a></li><li><ol class="section"><li><a href="pricelist/purchase-pricelist/penjelasan.html"><strong aria-hidden="true">2.1.1.</strong> Penjelasan</a></li><li><a href="pricelist/purchase-pricelist/membuat-data-purchase-pricelist.html"><strong aria-hidden="true">2.1.2.</strong> Membuat Data Purchase Pricelist</a></li></ol></li><li><a href="pricelist/sale-pricelist.html"><strong aria-hidden="true">2.2.</strong> Sale Pricelist</a></li><li><ol class="section"><li><a href="pricelist/sale-pricelist/penjelasan.html"><strong aria-hidden="true">2.2.1.</strong> Penjelasan</a></li><li><a href="pricelist/sale-pricelist/membuat-data-sale-pricelist.html"><strong aria-hidden="true">2.2.2.</strong> Membuat Data Sale Pricelist</a></li></ol></li></ol></li><li><a href="konfigurasi.html"><strong aria-hidden="true">3.</strong> Konfigurasi</a></li><li><ol class="section"><li><a href="konfigurasi/uom-category.html"><strong aria-hidden="true">3.1.</strong> UoM Category</a></li><li><ol class="section"><li><a href="konfigurasi/uom-category/penjelasan.html"><strong aria-hidden="true">3.1.1.</strong> Penjelasan</a></li><li><a href="konfigurasi/uom-category/membuat-data-uom-category.html"><strong aria-hidden="true">3.1.2.</strong> Membuat Data UoM Category</a></li></ol></li><li><a href="konfigurasi/uom.html"><strong aria-hidden="true">3.2.</strong> UoM</a></li><li><ol class="section"><li><a href="konfigurasi/uom/penjelasan.html"><strong aria-hidden="true">3.2.1.</strong> Penjelasan</a></li><li><a href="konfigurasi/uom/membuat-data-uom.html"><strong aria-hidden="true">3.2.2.</strong> Membuat Data UoM</a></li></ol></li><li><a href="konfigurasi/product-category.html"><strong aria-hidden="true">3.3.</strong> Product Category</a></li><li><ol class="section"><li><a href="konfigurasi/product-category/penjelasan.html"><strong aria-hidden="true">3.3.1.</strong> Penjelasan</a></li><li><a href="konfigurasi/product-category/membuat-data-product-category.html"><strong aria-hidden="true">3.3.2.</strong> Membuat Data Product Category</a></li></ol></li><li><a href="konfigurasi/logistics-unit.html"><strong aria-hidden="true">3.4.</strong> Logistics Unit</a></li><li><ol class="section"><li><a href="konfigurasi/logistics-unit/penjelasan.html"><strong aria-hidden="true">3.4.1.</strong> Penjelasan</a></li><li><a href="konfigurasi/logistics-unit/membuat-data-logistic-unit.html"><strong aria-hidden="true">3.4.2.</strong> Membuat Data Logistics Unit</a></li></ol></li><li><a href="konfigurasi/product-brand.html"><strong aria-hidden="true">3.5.</strong> Product Brand</a></li><li><ol class="section"><li><a href="konfigurasi/product-brand/penjelasan.html"><strong aria-hidden="true">3.5.1.</strong> Penjelasan</a></li><li><a href="konfigurasi/product-brand/membuat-data-product-brand.html"><strong aria-hidden="true">3.5.2.</strong> Membuat Data Product Brand</a></li></ol></li><li><a href="konfigurasi/public-product-category.html"><strong aria-hidden="true">3.6.</strong> Public Product Category</a></li><li><ol class="section"><li><a href="konfigurasi/public-product-category/penjelasan.html"><strong aria-hidden="true">3.6.1.</strong> Penjelasan</a></li><li><a href="konfigurasi/public-product-category/membuat-data-public-product-category.html"><strong aria-hidden="true">3.6.2.</strong> Membuat Data Public Product Category</a></li></ol></li><li><a href="konfigurasi/pricelist-type.html"><strong aria-hidden="true">3.7.</strong> Pricelist Type</a></li><li><ol class="section"><li><a href="konfigurasi/pricelist-type/penjelasan.html"><strong aria-hidden="true">3.7.1.</strong> Penjelasan</a></li><li><a href="konfigurasi/pricelist-type/membuat-data-pricelist-type.html"><strong aria-hidden="true">3.7.2.</strong> Membuat Data Pricelist Type</a></li></ol></li><li><a href="konfigurasi/pricelist-version.html"><strong aria-hidden="true">3.8.</strong> Pricelist Version</a></li><li><ol class="section"><li><a href="konfigurasi/pricelist-version/penjelasan.html"><strong aria-hidden="true">3.8.1.</strong> Penjelasan</a></li><li><a href="konfigurasi/pricelist-version/membuat-data-pricelist-version.html"><strong aria-hidden="true">3.8.2.</strong> Membuat Data Pricelist Version</a></li></ol></li><li><a href="konfigurasi/hazard-pictogram.html"><strong aria-hidden="true">3.9.</strong> Hazard Pictogram</a></li><li><ol class="section"><li><a href="konfigurasi/hazard-pictogram/penjelasan.html"><strong aria-hidden="true">3.9.1.</strong> Penjelasan</a></li><li><a href="konfigurasi/hazard-pictogram/membuat-data-hazard-pictogram.html"><strong aria-hidden="true">3.9.2.</strong> Membuat Data Hazard Pictogram</a></li></ol></li><li><a href="konfigurasi/hazard-precautionary-statement.html"><strong aria-hidden="true">3.10.</strong> Hazard Precautionary Statement</a></li><li><ol class="section"><li><a href="konfigurasi/hazard-precautionary-statement/penjelasan.html"><strong aria-hidden="true">3.10.1.</strong> Penjelasan</a></li><li><a href="konfigurasi/hazard-precautionary-statement/membuat-data-hazard-precautionary-statement.html"><strong aria-hidden="true">3.10.2.</strong> Membuat Data Hazard Precautionary Statement</a></li></ol></li><li><a href="konfigurasi/hazard-statement.html"><strong aria-hidden="true">3.11.</strong> Hazard Statement</a></li><li><ol class="section"><li><a href="konfigurasi/hazard-statement/penjelasan.html"><strong aria-hidden="true">3.11.1.</strong> Penjelasan</a></li><li><a href="konfigurasi/hazard-statement/membuat-data-hazard-statement.html"><strong aria-hidden="true">3.11.2.</strong> Membuat Data Hazard Statement</a></li></ol></li><li><a href="konfigurasi/ec-number-category.html"><strong aria-hidden="true">3.12.</strong> EC Number Category</a></li><li><ol class="section"><li><a href="konfigurasi/ec-number-category/penjelasan.html"><strong aria-hidden="true">3.12.1.</strong> Penjelasan</a></li><li><a href="konfigurasi/ec-number-category/membuat-data-ec-number-category.html"><strong aria-hidden="true">3.12.2.</strong> Membuat Data EC Number Category</a></li></ol></li><li><a href="konfigurasi/ec-number.html"><strong aria-hidden="true">3.13.</strong> EC Number</a></li><li><ol class="section"><li><a href="konfigurasi/ec-number/penjelasan.html"><strong aria-hidden="true">3.13.1.</strong> Penjelasan</a></li><li><a href="konfigurasi/ec-number/membuat-data-ec-number.html"><strong aria-hidden="true">3.13.2.</strong> Membuat Data EC Number</a></li></ol></li><li><a href="konfigurasi/cas-registry.html"><strong aria-hidden="true">3.14.</strong> CAS Registry</a></li><li><ol class="section"><li><a href="konfigurasi/cas-registry/penjelasan.html"><strong aria-hidden="true">3.14.1.</strong> Penjelasan</a></li><li><a href="konfigurasi/cas-registry/membuat-data-cas-registry.html"><strong aria-hidden="true">3.14.2.</strong> Membuat Data CAS Registry</a></li></ol></li></ol></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Odoo - Product Management</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#product" id="product"><h1>Product</h1></a>
+<a class="header" href="#penjelasan" id="penjelasan"><h1>Penjelasan</h1></a>
+<p>Informasi pada Product Template dibagi menjadi beberapa area, diantaranya:</p>
+<ul>
+<li><a href="#bagian-header">Header</a></li>
+<li><a href="#bagian-information">Tab Information</a></li>
+<li><a href="#bagian-extra-categories">Tab Extra Categories</a></li>
+<li><a href="#bagian-procurement">Tab Procurement</a></li>
+<li><a href="#bagian-inventory">Tab Inventory</a></li>
+<li><a href="#bagian-sales">Tab Sales</a></li>
+<li><a href="#bagian-variants">Tab Variants</a></li>
+<li><a href="#bagian-accounting">Tab Accounting</a></li>
+<li><a href="#bagian-hazard-information">Tab Hazard Information</a></li>
+<li><a href="#bagian-packaging">Tab Packaging</a></li>
+</ul>
+<a class="header" href="#a-namebagian-headerheadera" id="a-namebagian-headerheadera"><h3><a name="bagian-header">HEADER</a></h3></a>
+<p><img src="../img/product-template/header.png" alt="" /></p>
+<a class="header" href="#a-namefield-imageimagea" id="a-namefield-imageimagea"><h4><a name="field-image">Image</a></h4></a>
+<p><img src="../img/product-template/image.png" alt="" /><br/>
+Foto/gambar produk</p>
+<a class="header" href="#a-namefield-nameproduct-namea" id="a-namefield-nameproduct-namea"><h4><a name="field-name">Product Name</a></h4></a>
+<p>Nama produk</p>
+<a class="header" href="#a-namefield-brand-idbranda" id="a-namefield-brand-idbranda"><h4><a name="field-brand-id">Brand</a></h4></a>
+<p>Mendefinisikan brand dari produk</p>
+<a class="header" href="#a-namefield-can-soldcan-be-solda" id="a-namefield-can-soldcan-be-solda"><h4><a name="field-can-sold">Can be Sold</a></h4></a>
+<p>Jika dicentang, maka produk akan didefinisikan sebagai produk yang dapat dijual</p>
+<a class="header" href="#a-namefield-can-soldcan-be-expenseda" id="a-namefield-can-soldcan-be-expenseda"><h4><a name="field-can-sold">Can be Expensed</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namefield-can-soldcan-be-purchaseda" id="a-namefield-can-soldcan-be-purchaseda"><h4><a name="field-can-sold">Can be Purchased</a></h4></a>
+<p>Jika dicentang, maka produk akan didefinisikan sebagai produk yang dapat dibeli</p>
+<a class="header" href="#a-namefield-can-soldcan-be-used-for-djbc-kba" id="a-namefield-can-soldcan-be-used-for-djbc-kba"><h4><a name="field-can-sold">Can be Used for DJBC KB</a></h4></a>
+<blockquote>
+<p><strong>Catatan:</strong> (<em>Direktur Jendral Bea Cukai untuk Kawasan Berikat</em> number disingkat DJBC KB)</p>
+</blockquote>
+<p>Jika dicentang, maka produk akan didefinisikan sebagai produk yang digunakan untuk DJBC KB</p>
+<a class="header" href="#a-namefield-smart-buttonsmart-buttona" id="a-namefield-smart-buttonsmart-buttona"><h4><a name="field-smart-button">Smart Button</a></h4></a>
+<p><img src="../img/product-template/header-smart-button.png" alt="" /><br/></p>
+<p>Tombol-tombol yang berfungsi sebagai <em>Shortcut</em> untuk masuk ke dalam menu yang berkaitan dan juga sebagai pemberi informasi mengenai seberapa banyak data, total, dll <br /></p>
+<a class="header" href="#a-namebagian-informationtab-informationa" id="a-namebagian-informationtab-informationa"><h3><a name="bagian-information">TAB INFORMATION</a></h3></a>
+<p><img src="../img/product-template/tab-information.png" alt="" /></p>
+<a class="header" href="#a-namebagian-information-field-typeproduct-typea" id="a-namebagian-information-field-typeproduct-typea"><h4><a name="bagian-information-field-type">Product Type</a></h4></a>
+<p>Mendefinisikan tipe produk. Tipe produk dibagi atas beberapa pilihan, yaitu: <br/></p>
+<ul>
+<li><strong>Stockable Product:</strong> Produk yang berbentuk barang dan akan disimpan sebagai stock</li>
+<li><strong>Consumable:</strong> Produk yang kebutuhannya untuk dikonsumsi</li>
+<li><strong>Service:</strong> Produk yang berbentuk jasa</li>
+</ul>
+<a class="header" href="#a-namebagian-information-field-uom-idunit-of-measurea" id="a-namebagian-information-field-uom-idunit-of-measurea"><h4><a name="bagian-information-field-uom-id">Unit of Measure</a></h4></a>
+<p>Mendefinisikan satuan yang akan digunakan</p>
+<a class="header" href="#a-namebagian-information-field-list-pricesale-pricea" id="a-namebagian-information-field-list-pricesale-pricea"><h4><a name="bagian-information-field-list-price">Sale Price</a></h4></a>
+<p>Menentukan harga/nilai jual dari produk</p>
+<a class="header" href="#a-namebagian-information-field-hs-code-idhs-codea" id="a-namebagian-information-field-hs-code-idhs-codea"><h4><a name="bagian-information-field-hs-code-id">H.S Code</a></h4></a>
+<blockquote>
+<p><strong>Catatan:</strong> (Inggris: <em>Harmonised System</em> Code disingkat H.S Code)</p>
+</blockquote>
+<p>Mendefiniskan H.S Code dari produk</p>
+<a class="header" href="#a-namebagian-information-field-origin-country-idcountry-of-origina" id="a-namebagian-information-field-origin-country-idcountry-of-origina"><h4><a name="bagian-information-field-origin-country-id">Country of Origin</a></h4></a>
+<p>Daerah asal pembuatan produk</p>
+<a class="header" href="#a-namebagian-information-field-activeactivea" id="a-namebagian-information-field-activeactivea"><h4><a name="bagian-information-field-active">Active</a></h4></a>
+<p>Sebagai penanda apakah data adalah aktif/non-aktif</p>
+<a class="header" href="#a-namebagian-information-field-ean13ean13-barcodea" id="a-namebagian-information-field-ean13ean13-barcodea"><h4><a name="bagian-information-field-ean13">EAN13 Barcode</a></h4></a>
+<p>Mendefinisikan barcode bertipe EAN13 untuk produk.
+Barcode dapat digenerate secara otomati dengan mengklik tombol <strong>Set a Custom EAN</strong></p>
+<p><img src="../img/product-template/tab-information-ean.png" alt="" /></p>
+<ul>
+<li><strong>Reference:</strong> Referensi yang akan digunakan untuk mengenerate EAN13 Barcode secara otomatis</li>
+</ul>
+<a class="header" href="#a-namebagian-information-field-default-codeinternal-referencea" id="a-namebagian-information-field-default-codeinternal-referencea"><h4><a name="bagian-information-field-default-code">Internal Reference</a></h4></a>
+<p>Mendefinisikan referensi produk yang hanya akan digunakan oleh pihak internal</p>
+<a class="header" href="#a-namebagian-information-field-ec-number-idec-numbera" id="a-namebagian-information-field-ec-number-idec-numbera"><h4><a name="bagian-information-field-ec-number-id">EC Number</a></h4></a>
+<blockquote>
+<p><strong>Catatan:</strong> (Inggris: <em>European Community</em> number disingkat EC number)</p>
+</blockquote>
+<p>Mendefiniskan EC Number dari produk</p>
+<a class="header" href="#a-namebagian-information-field-cas-registry-idscas-registrya" id="a-namebagian-information-field-cas-registry-idscas-registrya"><h4><a name="bagian-information-field-cas-registry-ids">CAS Registry</a></h4></a>
+<blockquote>
+<p><strong>Catatan:</strong> (Inggris: <em>Chemical Abstracts Service</em> registry disingkat CAS Registry)</p>
+</blockquote>
+<p>Mendefiniskan CAS Registry dari produk</p>
+<a class="header" href="#a-namebagian-information-field-djbc-rmdjbc-raw-materiala" id="a-namebagian-information-field-djbc-rmdjbc-raw-materiala"><h4><a name="bagian-information-field-djbc-rm">DJBC RAW Material</a></h4></a>
+<p>Jika dicentang, maka produk akan digunakan sebagai DJBC Raw Material</p>
+<a class="header" href="#a-namebagian-information-field-djbc-fgdjbc-finished-gooda" id="a-namebagian-information-field-djbc-fgdjbc-finished-gooda"><h4><a name="bagian-information-field-djbc-fg">DJBC Finished Good</a></h4></a>
+<p>Jika dicentang, maka produk akan digunakan sebagai DJBC Finished Good</p>
+<a class="header" href="#a-namebagian-information-field-djbc-wipdjbc-wipa" id="a-namebagian-information-field-djbc-wipdjbc-wipa"><h4><a name="bagian-information-field-djbc-wip">DJBC WIP</a></h4></a>
+<p>Jika dicentang, maka produk akan digunakan sebagai DJBC WIP</p>
+<a class="header" href="#a-namebagian-information-field-operating-unit-idsoperating-unitsa" id="a-namebagian-information-field-operating-unit-idsoperating-unitsa"><h4><a name="bagian-information-field-operating-unit-ids">Operating Units</a></h4></a>
+<blockquote>
+<p><strong>Catatan:</strong> Isian ini hanya untuk user yang memiliki group <strong>Multi Operating Unit</strong></p>
+</blockquote>
+<p>Mendefinisikan operating unit untuk produk.</p>
+<a class="header" href="#a-namebagian-information-field-descriptiondescriptiona" id="a-namebagian-information-field-descriptiondescriptiona"><h4><a name="bagian-information-field-description">Description</a></h4></a>
+<p>Mendefinisikan deskripsi produk secara detail</p>
+<a class="header" href="#a-namebagian-extra-categoriestab-extra-categoriesa" id="a-namebagian-extra-categoriestab-extra-categoriesa"><h3><a name="bagian-extra-categories">TAB EXTRA CATEGORIES</a></h3></a>
+<p><img src="../img/product-template/tab-extra-categories.png" alt="" /></p>
+<a class="header" href="#a-namebagian-extra-categories-field-categ-idsclassification-categoriesa" id="a-namebagian-extra-categories-field-categ-idsclassification-categoriesa"><h4><a name="bagian-extra-categories-field-categ-ids">Classification Categories</a></h4></a>
+<p>Mendefinisikan kategori produk tambahan</p>
+<a class="header" href="#a-namebagian-procurementtab-procurementa" id="a-namebagian-procurementtab-procurementa"><h3><a name="bagian-procurement">TAB PROCUREMENT</a></h3></a>
+<p>Informasi pada Tab Procurement dibagi menjadi beberapa area, diantaranya:</p>
+<ul>
+<li><a href="#bagian-procurement-costing">Costing</a></li>
+<li><a href="#bagian-procurement-purchase">Purchase</a></li>
+<li><a href="#bagian-procurement-supply-chain-info">Supply Chain Information</a></li>
+<li><a href="#bagian-procurement-manufacturer">Manufacturer</a></li>
+<li><a href="#bagian-procurement-suppliers">Suppliers</a></li>
+</ul>
+<a class="header" href="#a-namebagian-procurement-costingcostinga" id="a-namebagian-procurement-costingcostinga"><h3><a name="bagian-procurement-costing">Costing</a></h3></a>
+<p><img src="../img/product-template/tab-procurements-header.png" alt="" /></p>
+<a class="header" href="#a-namebagian-procurement-field-cost-methodcosting-methoda" id="a-namebagian-procurement-field-cost-methodcosting-methoda"><h4><a name="bagian-procurement-field-cost-method">Costing Method</a></h4></a>
+<p>Mendefinisikan metode pembiayaan produk. Metode dibagi atas 3 pilihan, yaitu:<br/></p>
+<ul>
+<li><strong>Standard Price:</strong> Metode pembiayaan dimana harga yang digunakan akan tetap (tidak berubah) sampai ada pembaharuan</li>
+<li><strong>Average Price:</strong> Metode pembiayaan dimana harga akan dihitung secara rata-rata dari barang  yang pertama kali masuk hingga yang terakhir.</li>
+<li><strong>Real Price:</strong> Metode pembiayaan dimana harga yang digunakan sesuai dengan harga yang masuk</li>
+</ul>
+<a class="header" href="#a-namebagian-procurement-field-cost-pricecost-pricea" id="a-namebagian-procurement-field-cost-pricecost-pricea"><h4><a name="bagian-procurement-field-cost-price">Cost Price</a></h4></a>
+<p>Mendefiniskan harga pembelian</p>
+<a class="header" href="#a-namebagian-procurement-purchasepurchasea" id="a-namebagian-procurement-purchasepurchasea"><h3><a name="bagian-procurement-purchase">Purchase</a></h3></a>
+<p><img src="../img/product-template/tab-procurements-purchase.png" alt="" /></p>
+<a class="header" href="#a-namebagian-procurement-field-uom-po-idpurchase-unit-of-measurea" id="a-namebagian-procurement-field-uom-po-idpurchase-unit-of-measurea"><h4><a name="bagian-procurement-field-uom-po-id">Purchase Unit of Measure</a></h4></a>
+<p>Mendefiniskan satuan yang akan digunakan produk saat melakukan pembelian</p>
+<a class="header" href="#a-namebagian-procurement-supply-chain-infosupply-chain-informationa" id="a-namebagian-procurement-supply-chain-infosupply-chain-informationa"><h3><a name="bagian-procurement-supply-chain-info">Supply Chain Information</a></h3></a>
+<p><img src="../img/product-template/tab-procurements-supply-chain.png" alt="" /></p>
+<a class="header" href="#a-namebagian-procurement-field-route-idsroutesa" id="a-namebagian-procurement-field-route-idsroutesa"><h4><a name="bagian-procurement-field-route-ids">Routes</a></h4></a>
+<p>Mendefiniskan rute pergerakan produk</p>
+<a class="header" href="#a-namebagian-procurement-field-mrp-production-requestmanufacturing-requesta" id="a-namebagian-procurement-field-mrp-production-requestmanufacturing-requesta"><h4><a name="bagian-procurement-field-mrp-production-request">Manufacturing Request</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-procurement-field-purchase-requestpurchase-requesta" id="a-namebagian-procurement-field-purchase-requestpurchase-requesta"><h4><a name="bagian-procurement-field-purchase-request">Purchase Request</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-procurement-field-purchase-requesitioncall-for-bidsa" id="a-namebagian-procurement-field-purchase-requesitioncall-for-bidsa"><h4><a name="bagian-procurement-field-purchase-requesition">Call for Bids</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-procurement-manufacturermanufacturera" id="a-namebagian-procurement-manufacturermanufacturera"><h3><a name="bagian-procurement-manufacturer">Manufacturer</a></h3></a>
+<p><img src="../img/product-template/tab-procurements-manufacturer.png" alt="" /></p>
+<a class="header" href="#a-namebagian-procurement-field-manufacturermanufacturera" id="a-namebagian-procurement-field-manufacturermanufacturera"><h4><a name="bagian-procurement-field-manufacturer">Manufacturer</a></h4></a>
+<p>Mendefinisikan pabrikan dari produk</p>
+<a class="header" href="#a-namebagian-procurement-field-manufacturer-pnamemanufacturer-product-namea" id="a-namebagian-procurement-field-manufacturer-pnamemanufacturer-product-namea"><h4><a name="bagian-procurement-field-manufacturer-pname">Manufacturer Product Name</a></h4></a>
+<p>Mendefinisikan nama produk yang berasal dari pabrikan</p>
+<a class="header" href="#a-namebagian-procurement-field-manufacturer-pcodemanufacturer-product-codea" id="a-namebagian-procurement-field-manufacturer-pcodemanufacturer-product-codea"><h4><a name="bagian-procurement-field-manufacturer-pcode">Manufacturer Product Code</a></h4></a>
+<p>Mendefinisikan kode produk yang berasal dari pabrikan</p>
+<a class="header" href="#a-namebagian-procurement-field-manufacturer-purlmanufacturer-product-urla" id="a-namebagian-procurement-field-manufacturer-purlmanufacturer-product-urla"><h4><a name="bagian-procurement-field-manufacturer-purl">Manufacturer Product URL</a></h4></a>
+<p>Mendefinisikan alamat URL produk yang berasal dari pabrikan</p>
+<a class="header" href="#a-namebagian-procurement-supplierssuppliersa" id="a-namebagian-procurement-supplierssuppliersa"><h3><a name="bagian-procurement-suppliers">Suppliers</a></h3></a>
+<p><img src="../img/product-template/tab-procurements-supplier.png" alt="" />
+<img src="../img/product-template/tab-procurements-supplier-form.png" alt="" /></p>
+<a class="header" href="#a-namebagian-procurement-supplier-field-namepartnera" id="a-namebagian-procurement-supplier-field-namepartnera"><h4><a name="bagian-procurement-supplier-field-name">Partner</a></h4></a>
+<p>Mendefinisikan supplier dari produk</p>
+<a class="header" href="#a-namebagian-procurement-supplier-field-sequencesequencea" id="a-namebagian-procurement-supplier-field-sequencesequencea"><h4><a name="bagian-procurement-supplier-field-sequence">Sequence</a></h4></a>
+<p>No. Urut</p>
+<a class="header" href="#a-namebagian-procurement-supplier-field-product-codepartner-product-codea" id="a-namebagian-procurement-supplier-field-product-codepartner-product-codea"><h4><a name="bagian-procurement-supplier-field-product-code">Partner Product Code</a></h4></a>
+<p>Mendefinisikan kode produk yang diberikan oleh supplier</p>
+<a class="header" href="#a-namebagian-procurement-supplier-field-product-uompartner-unit-of-measurea" id="a-namebagian-procurement-supplier-field-product-uompartner-unit-of-measurea"><h4><a name="bagian-procurement-supplier-field-product-uom">Partner Unit of Measure</a></h4></a>
+<p>Mendefinisikan satuan produk yang diberikan oleh supplier</p>
+<a class="header" href="#a-namebagian-procurement-supplier-field-product-tmpl-idproducta" id="a-namebagian-procurement-supplier-field-product-tmpl-idproducta"><h4><a name="bagian-procurement-supplier-field-product-tmpl-id">Product</a></h4></a>
+<p>Mendefinisikan produk</p>
+<a class="header" href="#a-namebagian-procurement-supplier-field-product-codepartner-product-namea" id="a-namebagian-procurement-supplier-field-product-codepartner-product-namea"><h4><a name="bagian-procurement-supplier-field-product-code">Partner Product Name</a></h4></a>
+<p>Mendefinisikan nama produk yang diberikan oleh supplier</p>
+<a class="header" href="#a-namebagian-procurement-supplier-field-min-qtyminimal-quantitya" id="a-namebagian-procurement-supplier-field-min-qtyminimal-quantitya"><h4><a name="bagian-procurement-supplier-field-min-qty">Minimal Quantity</a></h4></a>
+<p>Mendefinisikan minimal kuantiti produk</p>
+<a class="header" href="#a-namebagian-procurement-supplier-field-delaydelivery-lead-timea" id="a-namebagian-procurement-supplier-field-delaydelivery-lead-timea"><h4><a name="bagian-procurement-supplier-field-delay">Delivery Lead Time</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-procurement-supplier-field-pricelist-min-qtyquantitya" id="a-namebagian-procurement-supplier-field-pricelist-min-qtyquantitya"><h4><a name="bagian-procurement-supplier-field-pricelist-min-qty">Quantity</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-procurement-supplier-field-pricelist-unit-priceunit-pricea" id="a-namebagian-procurement-supplier-field-pricelist-unit-priceunit-pricea"><h4><a name="bagian-procurement-supplier-field-pricelist-unit-price">Unit Price</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-procurement-field-descriptiondescriptiona" id="a-namebagian-procurement-field-descriptiondescriptiona"><h4><a name="bagian-procurement-field-description">Description</a></h4></a>
+<p><img src="../img/product-template/tab-procurements-4.png" alt="" /></p>
+<p>Mendefinisikan deskripsi supplier secara detail</p>
+<a class="header" href="#a-namebagian-inventorytab-inventorya" id="a-namebagian-inventorytab-inventorya"><h3><a name="bagian-inventory">TAB INVENTORY</a></h3></a>
+<p>Informasi pada Tab Inventory dibagi menjadi beberapa area, diantaranya:</p>
+<ul>
+<li><a href="#bagian-inventory-stock-expected-variations">Stock and Expected Variations</a></li>
+<li><a href="#bagian-inventory-lots">Lots</a></li>
+<li><a href="#bagian-inventory-status">Status</a></li>
+<li><a href="#bagian-inventory-storage-location">Storage Location</a></li>
+<li><a href="#bagian-inventory-counterpart-location">Counter-Part Locations Properties</a></li>
+<li><a href="#bagian-inventory-weight">Weights</a></li>
+<li><a href="#bagian-inventory-dates">Dates</a></li>
+<li><a href="#bagian-inventory-rma">RMA</a></li>
+<li><a href="#bagian-inventory-packaging">Packaging</a></li>
+<li><a href="#bagian-inventory-quality-control">Quality Control</a></li>
+</ul>
+<a class="header" href="#a-namebagian-inventory-stock-expected-variationsstock-and-expected-variationsa" id="a-namebagian-inventory-stock-expected-variationsstock-and-expected-variationsa"><h3><a name="bagian-inventory-stock-expected-variations">Stock and Expected Variations</a></h3></a>
+<p><img src="../img/product-template/tab-inventory-stock-expected-variation.png" alt="" /></p>
+<a class="header" href="#a-namebagian-inventory-field-qty-availablequantity-on-handa" id="a-namebagian-inventory-field-qty-availablequantity-on-handa"><h4><a name="bagian-inventory-field-qty-available">Quantity On Hand</a></h4></a>
+<p>Informasi total ketersediaan barang yang ada di gudang.
+Informasi ini dapat di-<em>update</em> nilainy dengan mengklik tombol <strong>Update</strong></p>
+<a class="header" href="#a-namebagian-inventory-field-incoming-qtyincominga" id="a-namebagian-inventory-field-incoming-qtyincominga"><h4><a name="bagian-inventory-field-incoming-qty">Incoming</a></h4></a>
+<p>Informasi total barang yang akan masuk.
+User dapat mengklik tombol <strong>Request Procurement</strong> untuk langsung melakukan permintaan pengadaan barang
+<img src="../img/product-template/tab-inventory-procurement-form.png" alt="" /></p>
+<ul>
+<li><strong>Warehouse:</strong> Mendefinisikan gudang</li>
+<li><strong>Product:</strong> Mendefinisikan produk. Isian ini akan diisi otomatis oleh sistem dan tidak dapat diganti</li>
+<li><strong>Quantity:</strong> Mendefinisikan banyaknya kuantiti dan satuan produk yang diminta untuk pengadaan barang</li>
+<li><strong>Planned Date:</strong> Menentukan tanggal perencanaan untuk permintaan pengadaan barang</li>
+</ul>
+<a class="header" href="#a-namebagian-inventory-field-qty-availableforecast-quantitya" id="a-namebagian-inventory-field-qty-availableforecast-quantitya"><h4><a name="bagian-inventory-field-qty-available">Forecast Quantity</a></h4></a>
+<p>Informasi total perkiraan produk yang tersedia.</p>
+<a class="header" href="#a-namebagian-inventory-lotslotsa" id="a-namebagian-inventory-lotslotsa"><h3><a name="bagian-inventory-lots">Lots</a></h3></a>
+<p><img src="../img/product-template/tab-inventory-lots.png" alt="" /></p>
+<a class="header" href="#a-namebagian-inventory-lots-field-track-allfull-lots-traceabilitya" id="a-namebagian-inventory-lots-field-track-allfull-lots-traceabilitya"><h4><a name="bagian-inventory-lots-field-track-all">Full Lots Traceability</a></h4></a>
+<p>Jika dicentang, maka produk ini diwajibkan memiliki serial number untuk setiap pergerakan stock(Masuk, Keluar, Produksi)</p>
+<a class="header" href="#a-namebagian-inventory-lots-field-track-incomingtrack-incoming-lotsa" id="a-namebagian-inventory-lots-field-track-incomingtrack-incoming-lotsa"><h4><a name="bagian-inventory-lots-field-track-incoming">Track Incoming Lots</a></h4></a>
+<p>Jika dicentang, maka produk ini diwajibkan memiliki serial number untuk setiap pergerakan stock masuk</p>
+<a class="header" href="#a-namebagian-inventory-lots-field-track-outgoingtrack-outgoing-lotsa" id="a-namebagian-inventory-lots-field-track-outgoingtrack-outgoing-lotsa"><h4><a name="bagian-inventory-lots-field-track-outgoing">Track Outgoing Lots</a></h4></a>
+<p>Jika dicentang, maka produk ini diwajibkan memiliki serial number untuk setiap pergerakan stock keluar</p>
+<a class="header" href="#a-namebagian-inventory-lots-field-track-productiontrack-manufacturing-lotsa" id="a-namebagian-inventory-lots-field-track-productiontrack-manufacturing-lotsa"><h4><a name="bagian-inventory-lots-field-track-production">Track Manufacturing Lots</a></h4></a>
+<p>Jika dicentang, maka produk ini diwajibkan memiliki serial number untuk setiap pergerakan stock produksi</p>
+<blockquote>
+<p><strong>Catatan:</strong> Isian <em>Track Incoming Lots</em>, <em>Track Outgoing Lots</em> dan <em>Track Manufacturing Lots</em> hanya dapat diisi apabila <em>Full Lots Traceability</em> tidak dicentang</p>
+</blockquote>
+<a class="header" href="#a-namebagian-inventory-statusstatusa" id="a-namebagian-inventory-statusstatusa"><h3><a name="bagian-inventory-status">Status</a></h3></a>
+<p><img src="../img/product-template/tab-inventory-status.png" alt="" /></p>
+<a class="header" href="#a-namebagian-inventory-status-field-statestatusa" id="a-namebagian-inventory-status-field-statestatusa"><h4><a name="bagian-inventory-status-field-state">Status</a></h4></a>
+<p>Mendefinisikan status. Status dibagi atas beberapa pilihan, yaitu:</p>
+<ul>
+<li><strong>In Development:</strong> #TODO</li>
+<li><strong>Normal:</strong> #TODO</li>
+<li><strong>End of Lifecycle:</strong> #TODO</li>
+<li><strong>Obsolote:</strong> #TODO</li>
+</ul>
+<a class="header" href="#a-namebagian-inventory-status-field-product-managerproduct-managera" id="a-namebagian-inventory-status-field-product-managerproduct-managera"><h4><a name="bagian-inventory-status-field-product-manager">Product Manager</a></h4></a>
+<p>Mendefinisikan manajer produk</p>
+<a class="header" href="#a-namebagian-inventory-storage-locationstorage-locationa" id="a-namebagian-inventory-storage-locationstorage-locationa"><h3><a name="bagian-inventory-storage-location">Storage Location</a></h3></a>
+<p><img src="../img/product-template/tab-inventory-storage-location.png" alt="" /></p>
+<a class="header" href="#a-namebagian-inventory-storage-location-field-casecasea" id="a-namebagian-inventory-storage-location-field-casecasea"><h4><a name="bagian-inventory-storage-location-field-case">Case</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-inventory-counterpart-locationcounter-part-locations-propertiesa" id="a-namebagian-inventory-counterpart-locationcounter-part-locations-propertiesa"><h3><a name="bagian-inventory-counterpart-location">Counter-Part Locations Properties</a></h3></a>
+<p><img src="../img/product-template/tab-inventory-counterpart-location.png" alt="" /></p>
+<a class="header" href="#a-namebagian-inventory-counterpart-location-field-property-stock-procurementprocurement-locationa" id="a-namebagian-inventory-counterpart-location-field-property-stock-procurementprocurement-locationa"><h4><a name="bagian-inventory-counterpart-location-field-property-stock-procurement">Procurement Location</a></h4></a>
+<p>Mendefinisikan lokasi <em>Procurement</em></p>
+<a class="header" href="#a-namebagian-inventory-counterpart-location-field-property-stock-productionproduction-locationa" id="a-namebagian-inventory-counterpart-location-field-property-stock-productionproduction-locationa"><h4><a name="bagian-inventory-counterpart-location-field-property-stock-production">Production Location</a></h4></a>
+<p>Mendefinisikan lokasi <em>Production</em></p>
+<a class="header" href="#a-namebagian-inventory-counterpart-location-field-property-stock-inventoryinventory-locationa" id="a-namebagian-inventory-counterpart-location-field-property-stock-inventoryinventory-locationa"><h4><a name="bagian-inventory-counterpart-location-field-property-stock-inventory">Inventory Location</a></h4></a>
+<p>Mendefinisikan lokasi <em>Inventory</em></p>
+<a class="header" href="#a-namebagian-inventory-weightweightsa" id="a-namebagian-inventory-weightweightsa"><h3><a name="bagian-inventory-weight">Weights</a></h3></a>
+<p><img src="../img/product-template/tab-inventory-weight.png" alt="" /></p>
+<a class="header" href="#a-namebagian-inventory-weight-field-volumevolumea" id="a-namebagian-inventory-weight-field-volumevolumea"><h4><a name="bagian-inventory-weight-field-volume">Volume</a></h4></a>
+<p>Mendefinisikan volume produk</p>
+<a class="header" href="#a-namebagian-inventory-weight-field-weightgross-weighta" id="a-namebagian-inventory-weight-field-weightgross-weighta"><h4><a name="bagian-inventory-weight-field-weight">Gross Weight</a></h4></a>
+<p>Mendefinisikan berat kotor produk</p>
+<a class="header" href="#a-namebagian-inventory-weight-field-weight-netnet-weighta" id="a-namebagian-inventory-weight-field-weight-netnet-weighta"><h4><a name="bagian-inventory-weight-field-weight-net">Net Weight</a></h4></a>
+<p>Mendefinisikan berat bersih produk</p>
+<a class="header" href="#a-namebagian-inventory-datesdatesa" id="a-namebagian-inventory-datesdatesa"><h3><a name="bagian-inventory-dates">Dates</a></h3></a>
+<p><img src="../img/product-template/tab-inventory-dates.png" alt="" /></p>
+<a class="header" href="#a-namebagian-inventory-dates-field-life-timeproduct-life-timea" id="a-namebagian-inventory-dates-field-life-timeproduct-life-timea"><h4><a name="bagian-inventory-dates-field-life-time">Product Life Time</a></h4></a>
+<p>Mendefinisikan berapa hari masa kadularsa produk</p>
+<a class="header" href="#a-namebagian-inventory-dates-field-use-timeproduct-use-timea" id="a-namebagian-inventory-dates-field-use-timeproduct-use-timea"><h4><a name="bagian-inventory-dates-field-use-time">Product Use Time</a></h4></a>
+<p>Mendefinisikan berapa hari layak pakai produk</p>
+<a class="header" href="#a-namebagian-inventory-dates-field-removal-timeproduct-removal-timea" id="a-namebagian-inventory-dates-field-removal-timeproduct-removal-timea"><h4><a name="bagian-inventory-dates-field-removal-time">Product Removal Time</a></h4></a>
+<p>Mendefinisikan berapa hari produk harus dibuang dari gudang</p>
+<a class="header" href="#a-namebagian-inventory-dates-field-removal-timeproduct-alert-timea" id="a-namebagian-inventory-dates-field-removal-timeproduct-alert-timea"><h4><a name="bagian-inventory-dates-field-removal-time">Product Alert Time</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-inventory-rmarmaa" id="a-namebagian-inventory-rmarmaa"><h3><a name="bagian-inventory-rma">RMA</a></h3></a>
+<p><img src="../img/product-template/tab-inventory-rma.png" alt="" /></p>
+<a class="header" href="#a-namebagian-inventory-rma-field-rma-approval-policyrma-approval-policya" id="a-namebagian-inventory-rma-field-rma-approval-policyrma-approval-policya"><h4><a name="bagian-inventory-rma-field-rma-approval-policy">RMA Approval Policy</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-inventory-rma-field-rma-customer-operation-idcustomer-rma-operationa" id="a-namebagian-inventory-rma-field-rma-customer-operation-idcustomer-rma-operationa"><h4><a name="bagian-inventory-rma-field-rma-customer-operation-id">Customer RMA Operation</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-inventory-rma-field-rma-supplier-operation-idsupplier-rma-operationa" id="a-namebagian-inventory-rma-field-rma-supplier-operation-idsupplier-rma-operationa"><h4><a name="bagian-inventory-rma-field-rma-supplier-operation-id">Supplier RMA Operation</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-inventory-packagingpackaginga" id="a-namebagian-inventory-packagingpackaginga"><h3><a name="bagian-inventory-packaging">Packaging</a></h3></a>
+<p><img src="../img/product-template/tab-inventory-packaging.png" alt="" />
+<img src="../img/product-template/tab-inventory-packaging-form.png" alt="" /></p>
+<a class="header" href="#a-namebagian-inventory-packaging-field-eaneana" id="a-namebagian-inventory-packaging-field-eaneana"><h4><a name="bagian-inventory-packaging-field-ean">EAN</a></h4></a>
+<p>Mendefiniskan kode EAN untuk packaging</p>
+<a class="header" href="#a-namebagian-inventory-packaging-field-qtyquantity-by-packagea" id="a-namebagian-inventory-packaging-field-qtyquantity-by-packagea"><h4><a name="bagian-inventory-packaging-field-qty">Quantity by Package</a></h4></a>
+<p>Mendefiniskan jumlah kuantiti untuk packaging</p>
+<a class="header" href="#a-namebagian-inventory-packaging-field-package-material-idpackage-materiala" id="a-namebagian-inventory-packaging-field-package-material-idpackage-materiala"><h4><a name="bagian-inventory-packaging-field-package-material-id">Package Material</a></h4></a>
+<p>Mendefiniskan material yang digunakan untuk packaging</p>
+<a class="header" href="#a-namebagian-inventory-packaging-field-ulpackage-logistic-unita" id="a-namebagian-inventory-packaging-field-ulpackage-logistic-unita"><h4><a name="bagian-inventory-packaging-field-ul">Package Logistic Unit</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-inventory-packaging-field-list-pricepackage-pricea" id="a-namebagian-inventory-packaging-field-list-pricepackage-pricea"><h4><a name="bagian-inventory-packaging-field-list-price">Package Price</a></h4></a>
+<p>Mendefiniskan harga packaging</p>
+<a class="header" href="#a-namebagian-inventory-packaging-field-ul-qtypackage-by-layera" id="a-namebagian-inventory-packaging-field-ul-qtypackage-by-layera"><h4><a name="bagian-inventory-packaging-field-ul-qty">Package by layer</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-inventory-packaging-field-ul-containerpallet-logistic-unita" id="a-namebagian-inventory-packaging-field-ul-containerpallet-logistic-unita"><h4><a name="bagian-inventory-packaging-field-ul-container">Pallet Logistic Unit</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-inventory-packaging-field-rowsnumber-of-layersa" id="a-namebagian-inventory-packaging-field-rowsnumber-of-layersa"><h4><a name="bagian-inventory-packaging-field-rows">Number of Layers</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-inventory-packaging-field-weightstotal-package-weighta" id="a-namebagian-inventory-packaging-field-weightstotal-package-weighta"><h4><a name="bagian-inventory-packaging-field-weights">Total Package Weight</a></h4></a>
+<p>Mendefiniskan berat total dari packaging</p>
+<a class="header" href="#a-namebagian-inventory-packaging-field-namedescriptiona" id="a-namebagian-inventory-packaging-field-namedescriptiona"><h4><a name="bagian-inventory-packaging-field-name">Description</a></h4></a>
+<p>Mendefiniskan deskripsi packaging</p>
+<a class="header" href="#a-namebagian-inventory-quality-controlquality-controla" id="a-namebagian-inventory-quality-controlquality-controla"><h3><a name="bagian-inventory-quality-control">Quality Control</a></h3></a>
+<p><img src="../img/product-template/tab-inventory-quality-control.png" alt="" /></p>
+<a class="header" href="#a-namebagian-inventory-quality-control-field-triggertriggera" id="a-namebagian-inventory-quality-control-field-triggertriggera"><h4><a name="bagian-inventory-quality-control-field-trigger">Trigger</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-inventory-quality-control-field-testtesta" id="a-namebagian-inventory-quality-control-field-testtesta"><h4><a name="bagian-inventory-quality-control-field-test">Test</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-inventory-quality-control-field-responsibleresponsiblea" id="a-namebagian-inventory-quality-control-field-responsibleresponsiblea"><h4><a name="bagian-inventory-quality-control-field-responsible">Responsible</a></h4></a>
+<p>Mendefinisikan siapa yang akan bertanggun jawab atas Quality Control</p>
+<a class="header" href="#a-namebagian-inventory-quality-control-field-partner-idpartnersa" id="a-namebagian-inventory-quality-control-field-partner-idpartnersa"><h4><a name="bagian-inventory-quality-control-field-partner-id">Partners</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-salestab-salesa" id="a-namebagian-salestab-salesa"><h3><a name="bagian-sales">TAB SALES</a></h3></a>
+<p>Informasi pada Tab Sales dibagi menjadi beberapa area, diantaranya:</p>
+<ul>
+<li><a href="#bagian-sales-conditions">Sale Conditions</a></li>
+<li><a href="#bagian-sales-uom">Unit of Measure</a></li>
+<li><a href="#bagian-sales-pos">Point of Sale</a></li>
+<li><a href="#bagian-sale-website">Website</a></li>
+<li><a href="#bagian-sales-customers">Customers</a></li>
+</ul>
+<a class="header" href="#a-namebagian-sales-conditionssale-conditionsa" id="a-namebagian-sales-conditionssale-conditionsa"><h3><a name="bagian-sales-conditions">Sale Conditions</a></h3></a>
+<p><img src="../img/product-template/tab-sales-sale-conditions.png" alt="" /></p>
+<a class="header" href="#a-namebagian-sales-conditions-field-warrantywarrantya" id="a-namebagian-sales-conditions-field-warrantywarrantya"><h4><a name="bagian-sales-conditions-field-warranty">Warranty</a></h4></a>
+<p>Mendefinisikan masa garansi produk</p>
+<a class="header" href="#a-namebagian-sales-conditions-field-sale-delaycustomer-lead-timea" id="a-namebagian-sales-conditions-field-sale-delaycustomer-lead-timea"><h4><a name="bagian-sales-conditions-field-sale-delay">Customer Lead Time</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-sales-conditions-field-produce-delaymanufacturing-lead-timea" id="a-namebagian-sales-conditions-field-produce-delaymanufacturing-lead-timea"><h4><a name="bagian-sales-conditions-field-produce-delay">Manufacturing Lead Time</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-sales-uomunit-of-measurea" id="a-namebagian-sales-uomunit-of-measurea"><h3><a name="bagian-sales-uom">Unit of Measure</a></h3></a>
+<p><img src="../img/product-template/tab-sales-unit-of-measure.png" alt="" /></p>
+<a class="header" href="#a-namebagian-sales-uom-field-uos-idunit-of-salea" id="a-namebagian-sales-uom-field-uos-idunit-of-salea"><h4><a name="bagian-sales-uom-field-uos-id">Unit of Sale</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-sales-uom-field-uos-coeffunit-of-measure---uos-coeffa" id="a-namebagian-sales-uom-field-uos-coeffunit-of-measure---uos-coeffa"><h4><a name="bagian-sales-uom-field-uos-coeff">Unit of Measure -&gt; UOS Coeff</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-sales-uom-field-mess-typemeasure-typea" id="a-namebagian-sales-uom-field-mess-typemeasure-typea"><h4><a name="bagian-sales-uom-field-mess-type">Measure Type</a></h4></a>
+<p>Terbagi atas 2 pilihan, yaitu:<br/></p>
+<ul>
+<li><strong>Fixed:</strong></li>
+<li><strong>Variable:</strong></li>
+</ul>
+<a class="header" href="#a-namebagian-sales-pospoint-of-salea" id="a-namebagian-sales-pospoint-of-salea"><h3><a name="bagian-sales-pos">Point of Sale</a></h3></a>
+<p><img src="../img/product-template/tab-sales-point-of-sale.png" alt="" /></p>
+<a class="header" href="#a-namebagian-sales-pos-field-po-categ-idpoint-of-sale-categorya" id="a-namebagian-sales-pos-field-po-categ-idpoint-of-sale-categorya"><h4><a name="bagian-sales-pos-field-po-categ-id">Point of Sale Category</a></h4></a>
+<p>Mendefinisikan kategori dari PoS</p>
+<a class="header" href="#a-namebagian-sales-pos-field-available-in-posavailable-in-the-point-of-salea" id="a-namebagian-sales-pos-field-available-in-posavailable-in-the-point-of-salea"><h4><a name="bagian-sales-pos-field-available-in-pos">Available in the Point of Sale</a></h4></a>
+<p>Jika dicentang, maka produk akan tersedia pada PoS</p>
+<a class="header" href="#a-namebagian-sales-pos-field-not-returnablenot-returnablea" id="a-namebagian-sales-pos-field-not-returnablenot-returnablea"><h4><a name="bagian-sales-pos-field-not-returnable">Not Returnable</a></h4></a>
+<p>Jika dicentang, maka produk tidak bisa dikembalikan</p>
+<a class="header" href="#a-namebagian-sales-pos-field-to-weightto-weigh-with-scalea" id="a-namebagian-sales-pos-field-to-weightto-weigh-with-scalea"><h4><a name="bagian-sales-pos-field-to-weight">To Weigh With Scale</a></h4></a>
+<p>Jika dicentang, maka produk diwajibkan untuk ditimbang terlebih dahulu menggunakan timbangan yang sudah terintegrasi langsung</p>
+<a class="header" href="#a-namebagian-sales-pos-field-income-pdtpoint-of-sale-cash-ina" id="a-namebagian-sales-pos-field-income-pdtpoint-of-sale-cash-ina"><h4><a name="bagian-sales-pos-field-income-pdt">Point of Sale Cash In</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-sales-pos-field-income-pdtpoint-of-sale-cash-outa" id="a-namebagian-sales-pos-field-income-pdtpoint-of-sale-cash-outa"><h4><a name="bagian-sales-pos-field-income-pdt">Point of Sale Cash Out</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-sales-websitewebsitea" id="a-namebagian-sales-websitewebsitea"><h3><a name="bagian-sales-website">Website</a></h3></a>
+<p><img src="../img/product-template/tab-sales-website.png" alt="" /></p>
+<a class="header" href="#a-namebagian-sales-website-field-public-categ-idspublic-categorya" id="a-namebagian-sales-website-field-public-categ-idspublic-categorya"><h4><a name="bagian-sales-website-field-public-categ-ids">Public Category</a></h4></a>
+<p>Mengkategorikan produk yang hampir sama untuk kebutuhan e-commerce</p>
+<a class="header" href="#a-namebagian-sales-website-field-website-publishedavailable-in-the-websitea" id="a-namebagian-sales-website-field-website-publishedavailable-in-the-websitea"><h4><a name="bagian-sales-website-field-website-published">Available in the website</a></h4></a>
+<ul>
+<li><strong>Not Published:</strong> Produk tidak akan dipublikasikan pada halaman website</li>
+<li><strong>Published:</strong> Produk tidak akan dipublikasikan pada halaman website</li>
+</ul>
+<a class="header" href="#a-namebagian-sales-website-field-alternative-product-idsalternative-productsa" id="a-namebagian-sales-website-field-alternative-product-idsalternative-productsa"><h4><a name="bagian-sales-website-field-alternative-product-ids">Alternative Products</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-sales-website-field-acc-product-idsaccessory-productsa" id="a-namebagian-sales-website-field-acc-product-idsaccessory-productsa"><h4><a name="bagian-sales-website-field-acc-product-ids">Accessory Products</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-sales-website-field-website-style-idsstylesa" id="a-namebagian-sales-website-field-website-style-idsstylesa"><h4><a name="bagian-sales-website-field-website-style-ids">Styles</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-sales-website-field-website-sequencesequencea" id="a-namebagian-sales-website-field-website-sequencesequencea"><h4><a name="bagian-sales-website-field-website-sequence">Sequence</a></h4></a>
+<p>Mendefinisikan kode sequence</p>
+<a class="header" href="#a-namebagian-sales-customerscustomersa" id="a-namebagian-sales-customerscustomersa"><h3><a name="bagian-sales-customers">Customers</a></h3></a>
+<p><img src="../img/product-template/tab-sales-customers.png" alt="" />
+<img src="../img/product-template/tab-sales-customers-form.png" alt="" /></p>
+<a class="header" href="#a-namebagian-procurement-customers-field-namepartnera" id="a-namebagian-procurement-customers-field-namepartnera"><h4><a name="bagian-procurement-customers-field-name">Partner</a></h4></a>
+<p>Mendefinisikan konsumen</p>
+<a class="header" href="#a-namebagian-procurement-customers-field-sequencesequencea" id="a-namebagian-procurement-customers-field-sequencesequencea"><h4><a name="bagian-procurement-customers-field-sequence">Sequence</a></h4></a>
+<p>No. Urut</p>
+<a class="header" href="#a-namebagian-procurement-customers-field-product-codepartner-product-codea" id="a-namebagian-procurement-customers-field-product-codepartner-product-codea"><h4><a name="bagian-procurement-customers-field-product-code">Partner Product Code</a></h4></a>
+<p>Mendefinisikan kode produk yang diberikan oleh supplier</p>
+<a class="header" href="#a-namebagian-procurement-supplier-field-product-uompartner-unit-of-measurea-1" id="a-namebagian-procurement-supplier-field-product-uompartner-unit-of-measurea-1"><h4><a name="bagian-procurement-supplier-field-product-uom">Partner Unit of Measure</a></h4></a>
+<p>Mendefinisikan satuan produk yang diberikan oleh supplier</p>
+<a class="header" href="#a-namebagian-procurement-supplier-field-product-tmpl-idproducta-1" id="a-namebagian-procurement-supplier-field-product-tmpl-idproducta-1"><h4><a name="bagian-procurement-supplier-field-product-tmpl-id">Product</a></h4></a>
+<p>Mendefinisikan produk</p>
+<a class="header" href="#a-namebagian-procurement-supplier-field-product-codepartner-product-namea-1" id="a-namebagian-procurement-supplier-field-product-codepartner-product-namea-1"><h4><a name="bagian-procurement-supplier-field-product-code">Partner Product Name</a></h4></a>
+<p>Mendefinisikan nama produk yang diberikan oleh supplier</p>
+<a class="header" href="#a-namebagian-procurement-supplier-field-min-qtyminimal-quantitya-1" id="a-namebagian-procurement-supplier-field-min-qtyminimal-quantitya-1"><h4><a name="bagian-procurement-supplier-field-min-qty">Minimal Quantity</a></h4></a>
+<p>Mendefinisikan minimal kuantiti produk</p>
+<a class="header" href="#a-namebagian-procurement-supplier-field-delaydelivery-lead-timea-1" id="a-namebagian-procurement-supplier-field-delaydelivery-lead-timea-1"><h4><a name="bagian-procurement-supplier-field-delay">Delivery Lead Time</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-procurement-supplier-field-pricelist-min-qtyquantitya-1" id="a-namebagian-procurement-supplier-field-pricelist-min-qtyquantitya-1"><h4><a name="bagian-procurement-supplier-field-pricelist-min-qty">Quantity</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-procurement-supplier-field-pricelist-unit-priceunit-pricea-1" id="a-namebagian-procurement-supplier-field-pricelist-unit-priceunit-pricea-1"><h4><a name="bagian-procurement-supplier-field-pricelist-unit-price">Unit Price</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-sales-field-descriptiondescription-for-quotationsa" id="a-namebagian-sales-field-descriptiondescription-for-quotationsa"><h4><a name="bagian-sales-field-description">Description for Quotations</a></h4></a>
+<p><img src="../img/product-template/tab-sales-3.png" alt="" /></p>
+<p>Mendefinisikan deskripsi quotations secara detail</p>
+<a class="header" href="#a-namebagian-variantstab-variantsa" id="a-namebagian-variantstab-variantsa"><h3><a name="bagian-variants">TAB VARIANTS</a></h3></a>
+<p><img src="../img/product-template/tab-variants.png" alt="" /></p>
+<a class="header" href="#a-namebagian-variants-field-smart-buttonsmart-buttona" id="a-namebagian-variants-field-smart-buttonsmart-buttona"><h4><a name="bagian-variants-field-smart-button">Smart Button</a></h4></a>
+<p><img src="../img/product-template/tab-variants-smart-button.png" alt="" /><br/></p>
+<p>Tombol-tombol yang berfungsi sebagai <em>Shortcut</em> untuk masuk ke dalam menu yang berkaitan dan juga sebagai pemberi informasi mengenai seberapa banyak data, total, dll <br /></p>
+<a class="header" href="#a-namebagian-variants-field-attribute-idattributea" id="a-namebagian-variants-field-attribute-idattributea"><h4><a name="bagian-variants-field-attribute-id">Attribute</a></h4></a>
+<p>Mendefinisikan attribut yang diperlukan untuk variasi produk</p>
+<a class="header" href="#a-namebagian-variants-field-requiredrequireda" id="a-namebagian-variants-field-requiredrequireda"><h4><a name="bagian-variants-field-required">Required</a></h4></a>
+<p>Jika dicentang, maka akan bersifat wajib diisi</p>
+<a class="header" href="#a-namebagian-variants-field-value-idsproduct-attribute-valuea" id="a-namebagian-variants-field-value-idsproduct-attribute-valuea"><h4><a name="bagian-variants-field-value-ids">Product Attribute Value</a></h4></a>
+<p>Mendefinisikan value dari attribut produk yang dipilih</p>
+<a class="header" href="#a-namebagian-accountingtab-accountinga" id="a-namebagian-accountingtab-accountinga"><h3><a name="bagian-accounting">TAB ACCOUNTING</a></h3></a>
+<p><img src="../img/product-template/tab-accounting.png" alt="" /></p>
+<a class="header" href="#a-namebagian-accounting-field-categ-idinternal-categorya" id="a-namebagian-accounting-field-categ-idinternal-categorya"><h4><a name="bagian-accounting-field-categ-id">Internal Category</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-accounting-field-property-account-incomeincome-accounta" id="a-namebagian-accounting-field-property-account-incomeincome-accounta"><h4><a name="bagian-accounting-field-property-account-income">Income Account</a></h4></a>
+<p>Mendefinisikan akun pemasukan untuk produk</p>
+<a class="header" href="#a-namebagian-accounting-field-property-account-expenseexpense-accounta" id="a-namebagian-accounting-field-property-account-expenseexpense-accounta"><h4><a name="bagian-accounting-field-property-account-expense">Expense Account</a></h4></a>
+<p>Mendefinisikan akun pengeluaran untuk produk</p>
+<a class="header" href="#a-namebagian-accounting-field-taxes-idcustomer-taxesa" id="a-namebagian-accounting-field-taxes-idcustomer-taxesa"><h4><a name="bagian-accounting-field-taxes-id">Customer Taxes</a></h4></a>
+<p>Mendefinisikan pajak yang akan dikenakan terhadap konsumen</p>
+<a class="header" href="#a-namebagian-accounting-field-supplier-taxes-idsupplier-taxesa" id="a-namebagian-accounting-field-supplier-taxes-idsupplier-taxesa"><h4><a name="bagian-accounting-field-supplier-taxes-id">Supplier Taxes</a></h4></a>
+<p>Mendefinisikan pajak yang akan dikenakan terhadap supplier</p>
+<a class="header" href="#a-namebagian-accounting-field-must-have-datesmust-have-start-and-end-datesa" id="a-namebagian-accounting-field-must-have-datesmust-have-start-and-end-datesa"><h4><a name="bagian-accounting-field-must-have-dates">Must Have Start and End Dates</a></h4></a>
+<p>Jika dicentang, maka produk ini wajib memiliki tanggal mulai dan akhir pada invoice line</p>
+<a class="header" href="#a-namebagian-hazard-informationtab-hazard-informationa" id="a-namebagian-hazard-informationtab-hazard-informationa"><h3><a name="bagian-hazard-information">TAB HAZARD INFORMATION</a></h3></a>
+<p>Informasi pada Tab Hazard Information dibagi menjadi beberapa area, diantaranya:</p>
+<ul>
+<li><a href="#bagian-hazard-statement">Hazard Statement</a></li>
+<li><a href="#bagian-hazard-precautionary">Hazard Precautionary Statement</a></li>
+<li><a href="#bagian-hazard-pictogram">Hazard Pictogram</a></li>
+</ul>
+<a class="header" href="#a-namebagian-hazard-statementhazard-statementa" id="a-namebagian-hazard-statementhazard-statementa"><h3><a name="bagian-hazard-statement">Hazard Statement</a></h3></a>
+<p><img src="../img/product-template/tab-hazard-statement.png" alt="" /></p>
+<a class="header" href="#a-namebagian-hazard-statement-field-hazard-statement-idhazard-statementa" id="a-namebagian-hazard-statement-field-hazard-statement-idhazard-statementa"><h4><a name="bagian-hazard-statement-field-hazard-statement-id">Hazard Statement</a></h4></a>
+<p>Mendefinisikan pernyataan bahaya terkait produk</p>
+<a class="header" href="#a-namebagian-hazard-precautionaryhazard-precautionary-statementa" id="a-namebagian-hazard-precautionaryhazard-precautionary-statementa"><h3><a name="bagian-hazard-precautionary">Hazard Precautionary Statement</a></h3></a>
+<p><img src="../img/product-template/tab-hazard-precautionary-statement.png" alt="" /></p>
+<a class="header" href="#a-namebagian-hazard-statement-field-hazard-precautionary-statement-idhazard-precautionary-statementa" id="a-namebagian-hazard-statement-field-hazard-precautionary-statement-idhazard-precautionary-statementa"><h4><a name="bagian-hazard-statement-field-hazard-precautionary-statement-id">Hazard Precautionary Statement</a></h4></a>
+<p>Mendefinisikan pernyataan pencegahan bahaya terkait produk</p>
+<a class="header" href="#a-namebagian-hazard-pictogramhazard-pictograma" id="a-namebagian-hazard-pictogramhazard-pictograma"><h3><a name="bagian-hazard-pictogram">Hazard Pictogram</a></h3></a>
+<p><img src="../img/product-template/tab-hazard-pictogram.png" alt="" /></p>
+<a class="header" href="#a-namebagian-hazard-statement-field-hazard-pictogram-idhazard-pictograma" id="a-namebagian-hazard-statement-field-hazard-pictogram-idhazard-pictograma"><h4><a name="bagian-hazard-statement-field-hazard-pictogram-id">Hazard Pictogram</a></h4></a>
+<p>Mendefinisikan pictogram dari pernyataan pencegahan bahaya terkait produk</p>
+<a class="header" href="#a-namebagian-packagingtab-packaginga" id="a-namebagian-packagingtab-packaginga"><h3><a name="bagian-packaging">TAB PACKAGING</a></h3></a>
+<p><img src="../img/product-template/tab-packaging.png" alt="" />
+<img src="../img/product-template/tab-packaging-form.png" alt="" /></p>
+<a class="header" href="#a-namebagian-packaging-field-product-tmpl-idproducta" id="a-namebagian-packaging-field-product-tmpl-idproducta"><h4><a name="bagian-packaging-field-product-tmpl-id">Product</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-inventory-packaging-field-eaneana-1" id="a-namebagian-inventory-packaging-field-eaneana-1"><h4><a name="bagian-inventory-packaging-field-ean">EAN</a></h4></a>
+<p>Mendefiniskan kode EAN untuk packaging</p>
+<a class="header" href="#a-namebagian-inventory-packaging-field-qtyquantity-by-packagea-1" id="a-namebagian-inventory-packaging-field-qtyquantity-by-packagea-1"><h4><a name="bagian-inventory-packaging-field-qty">Quantity by Package</a></h4></a>
+<p>Mendefiniskan jumlah kuantiti untuk packaging</p>
+<a class="header" href="#a-namebagian-inventory-packaging-field-list-pricepackage-pricea-1" id="a-namebagian-inventory-packaging-field-list-pricepackage-pricea-1"><h4><a name="bagian-inventory-packaging-field-list-price">Package Price</a></h4></a>
+<p>Mendefiniskan harga packaging</p>
+<a class="header" href="#a-namebagian-packaging-field-product-tmpl-idpackage-producta" id="a-namebagian-packaging-field-product-tmpl-idpackage-producta"><h4><a name="bagian-packaging-field-product-tmpl-id">Package Product</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-inventory-packaging-field-package-material-idpackage-materiala-1" id="a-namebagian-inventory-packaging-field-package-material-idpackage-materiala-1"><h4><a name="bagian-inventory-packaging-field-package-material-id">Package Material</a></h4></a>
+<p>Mendefiniskan material yang digunakan untuk packaging</p>
+<a class="header" href="#a-namebagian-inventory-packaging-field-ulpackage-logistic-unita-1" id="a-namebagian-inventory-packaging-field-ulpackage-logistic-unita-1"><h4><a name="bagian-inventory-packaging-field-ul">Package Logistic Unit</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-inventory-packaging-field-ul-qtypackage-by-layera-1" id="a-namebagian-inventory-packaging-field-ul-qtypackage-by-layera-1"><h4><a name="bagian-inventory-packaging-field-ul-qty">Package by layer</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-inventory-packaging-field-ul-containerpallet-logistic-unita-1" id="a-namebagian-inventory-packaging-field-ul-containerpallet-logistic-unita-1"><h4><a name="bagian-inventory-packaging-field-ul-container">Pallet Logistic Unit</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-inventory-packaging-field-rowsnumber-of-layersa-1" id="a-namebagian-inventory-packaging-field-rowsnumber-of-layersa-1"><h4><a name="bagian-inventory-packaging-field-rows">Number of Layers</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namebagian-inventory-packaging-field-weightstotal-package-weighta-1" id="a-namebagian-inventory-packaging-field-weightstotal-package-weighta-1"><h4><a name="bagian-inventory-packaging-field-weights">Total Package Weight</a></h4></a>
+<p>Mendefiniskan berat total dari packaging</p>
+<a class="header" href="#a-namebagian-inventory-packaging-field-namedescriptiona-1" id="a-namebagian-inventory-packaging-field-namedescriptiona-1"><h4><a name="bagian-inventory-packaging-field-name">Description</a></h4></a>
+<p>Mendefiniskan deskripsi packaging</p>
+<a class="header" href="#membuat-data-product-template" id="membuat-data-product-template"><h1>Membuat Data Product Template</h1></a>
+<a class="header" href="#pricelist" id="pricelist"><h1>Pricelist</h1></a>
+<ul>
+<li><a href="./purchase-pricelist.html">Purchase Pricelist</a></li>
+<li><a href="./sale-pricelist.html">Sale Pricelist</a></li>
+</ul>
+<a class="header" href="#purchase-pricelist" id="purchase-pricelist"><h1>Purchase Pricelist</h1></a>
+<a class="header" href="#penjelasan-1" id="penjelasan-1"><h1>Penjelasan</h1></a>
+<a class="header" href="#membuat-data-purchase-pricelist" id="membuat-data-purchase-pricelist"><h1>Membuat Data Purchase Pricelist</h1></a>
+<a class="header" href="#sale-pricelist" id="sale-pricelist"><h1>Sale Pricelist</h1></a>
+<a class="header" href="#penjelasan-2" id="penjelasan-2"><h1>Penjelasan</h1></a>
+<a class="header" href="#membuat-data-sale-pricelist" id="membuat-data-sale-pricelist"><h1>Membuat Data Sale Pricelist</h1></a>
+<a class="header" href="#konfigurasi" id="konfigurasi"><h1>Konfigurasi</h1></a>
+<ul>
+<li><a href="./uom-category.html">UoM Category</a></li>
+<li><a href="./uom.html">UoM</a></li>
+<li><a href="./product-category.html">Product Category</a></li>
+<li><a href="./logistics-unit.html">Logistics Unit</a></li>
+<li><a href="./product-brand.html">Product Brand</a></li>
+<li><a href="./public-product-category.html">Public Product Category</a></li>
+<li><a href="./pricelist-type.html">Pricelist Type</a></li>
+<li><a href="./pricelist-version.html">Pricelist Version</a></li>
+<li><a href="./hazard-pictogram.html">Hazard Pictogram</a></li>
+<li><a href="./hazard-precautionary-statement.html">Hazard Precautionary Statement</a></li>
+<li><a href="./hazard-statement.html">Hazard Statement</a></li>
+<li><a href="./ec-number-category.html">EC Number Category</a></li>
+<li><a href="./ec-number.html">EC Number</a></li>
+<li><a href="./cas-registry.html">CAS Registry</a></li>
+</ul>
+<a class="header" href="#uom-category" id="uom-category"><h1>UoM Category</h1></a>
+<a class="header" href="#penjelasan-3" id="penjelasan-3"><h1>Penjelasan</h1></a>
+<a class="header" href="#a-namebagian-headerheadera-1" id="a-namebagian-headerheadera-1"><h3><a name="bagian-header">HEADER</a></h3></a>
+<p><img src="../../img/uom-category/form.png" alt="" /></p>
+<a class="header" href="#a-namefield-namenamea" id="a-namefield-namenamea"><h4><a name="field-name">Name</a></h4></a>
+<p>Nama kategori UoM/Satuan</p>
+<a class="header" href="#membuat-data-uom-category" id="membuat-data-uom-category"><h1>Membuat Data UoM Category</h1></a>
+<ol>
+<li>Buka menu <strong>Product -&gt; Configuration -&gt; Unit of Measure -&gt; Unit of Measure Category</strong></li>
+<li>Klik tombol <strong>Create</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/uom-category/tombol-create.png" alt="" /></p>
+<ol start="3">
+<li>Isi <strong><a href="konfigurasi/uom-category/./penjelasan.html#field-name">Name</a></strong>. Harus diisi.</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/uom-category/tombol-save.png" alt="" /></p>
+<a class="header" href="#uom" id="uom"><h1>UoM</h1></a>
+<a class="header" href="#penjelasan-4" id="penjelasan-4"><h1>Penjelasan</h1></a>
+<a class="header" href="#a-namebagian-headerheadera-2" id="a-namebagian-headerheadera-2"><h3><a name="bagian-header">HEADER</a></h3></a>
+<p><img src="../../img/uom/form.png" alt="" /></p>
+<a class="header" href="#a-namefield-nameunit-of-measurea" id="a-namefield-nameunit-of-measurea"><h4><a name="field-name">Unit of Measure</a></h4></a>
+<p>Nama UoM/Satuan</p>
+<a class="header" href="#a-namefield-category-idunit-of-measure-categorya" id="a-namefield-category-idunit-of-measure-categorya"><h4><a name="field-category-id">Unit of Measure Category</a></h4></a>
+<p>Mendefinisikan kategori UoM/Satuan</p>
+<a class="header" href="#a-namefield-uom-typetypea" id="a-namefield-uom-typetypea"><h4><a name="field-uom-type">Type</a></h4></a>
+<p>Tipe UoM/Satuan. Terbagi atas 3 pilihan, yaitu:<br /></p>
+<ul>
+<li><strong>Bigger</strong>: Lebih besar dari referensi UoM/Satuan</li>
+<li><strong>Reference</strong>: Mendefinisikan UoM sebagai referensi</li>
+<li><strong>Smaller</strong>: Lebih kecil dari referensi UoM/Satuan</li>
+</ul>
+<a class="header" href="#a-namefield-activeactivea" id="a-namefield-activeactivea"><h4><a name="field-active">Active</a></h4></a>
+<p>Sebagai penanda apakah data adalah aktif/non-aktif</p>
+<a class="header" href="#a-namefield-roundingrounding-precisiona" id="a-namefield-roundingrounding-precisiona"><h4><a name="field-rounding">Rounding Precision</a></h4></a>
+<p>Mengatur pembulatan UoM/satuan</p>
+<a class="header" href="#membuat-data-uom" id="membuat-data-uom"><h1>Membuat Data UoM</h1></a>
+<ol>
+<li>Buka menu <strong>Product -&gt; Configuration -&gt; Unit of Measure -&gt; Unit of Measure</strong></li>
+<li>Klik tombol <strong>Create</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/uom/tombol-create.png" alt="" /></p>
+<ol start="3">
+<li>Pilihlah <strong><a href="konfigurasi/uom/./penjelasan.html#field-name">Unit of Measure</a></strong>. Harus diisi.</li>
+<li>Pilihlah <strong><a href="konfigurasi/uom/./penjelasan.html#field-category-id">Unit of Measure Category</a></strong>. Harus diisi.</li>
+<li>Ubah <strong><a href="konfigurasi/uom/./penjelasan.html#field-uom-type">Type</a></strong> jika dibutuhkan. Harus diisi</li>
+<li>Ubah <strong><a href="konfigurasi/uom/./penjelasan.html#field-active">Active</a></strong> jika dibutuhkan.</li>
+<li>Ubah <strong><a href="konfigurasi/uom/./penjelasan.html#field-rounding">Rouding Precision</a></strong> jika dibutuhkan. Harus diisi.</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/uom/tombol-save.png" alt="" /></p>
+<a class="header" href="#product-category" id="product-category"><h1>Product Category</h1></a>
+<a class="header" href="#penjelasan-5" id="penjelasan-5"><h1>Penjelasan</h1></a>
+<p>Informasi pada Kategori Produk dibagi menjadi beberapa area, diantaranya:</p>
+<ul>
+<li><a href="#bagian-header">Header</a></li>
+<li><a href="#form-import-export-properties">Import/Export Properties</a></li>
+<li><a href="#form-logistics">Logistics</a></li>
+<li><a href="#form-rma">RMA</a></li>
+<li><a href="#form-serial-number">Serial Number/lot blocking</a></li>
+<li><a href="#form-account-properties">Account Properties</a></li>
+<li><a href="#form-account-stock-properties">Account Stock Properties</a></li>
+<li><a href="#form-quality-control">Quality control</a></li>
+</ul>
+<a class="header" href="#a-namebagian-headerheadera-3" id="a-namebagian-headerheadera-3"><h3><a name="bagian-header">HEADER</a></h3></a>
+<p><img src="../../img/product-category/header.png" alt="" /></p>
+<a class="header" href="#a-namefield-namenamea-1" id="a-namefield-namenamea-1"><h4><a name="field-name">Name</a></h4></a>
+<p>Nama kategori produk</p>
+<a class="header" href="#a-namefield-parent-idparent-categorya" id="a-namefield-parent-idparent-categorya"><h4><a name="field-parent-id">Parent Category</a></h4></a>
+<p>Parent/Induk dari kategori produk</p>
+<a class="header" href="#a-namefield-typecategory-typea" id="a-namefield-typecategory-typea"><h4><a name="field-type">Category Type</a></h4></a>
+<p>Tipe kategori. Terbagi atas 2 tipe, yaitu:<br /></p>
+<ul>
+<li><strong>Normal</strong></li>
+<li><strong>View</strong></li>
+</ul>
+<a class="header" href="#a-nameform-import-export-propertiesimportexport-propertiesa" id="a-nameform-import-export-propertiesimportexport-propertiesa"><h3><a name="form-import-export-properties">Import/Export Properties</a></h3></a>
+<p><img src="../../img/product-category/form-import-export-properties.png" alt="" /></p>
+<a class="header" href="#a-namefield-hs-code-idhs-codea" id="a-namefield-hs-code-idhs-codea"><h4><a name="field-hs-code-id">H.S. Code</a></h4></a>
+<p>Nomor kode <em>Harmonized System</em>(HS)</p>
+<a class="header" href="#a-nameform-logisticslogisticsa" id="a-nameform-logisticslogisticsa"><h3><a name="form-logistics">Logistics</a></h3></a>
+<p><img src="../../img/product-category/form-logistics.png" alt="" /></p>
+<a class="header" href="#a-namefield-route-idsroutesa" id="a-namefield-route-idsroutesa"><h4><a name="field-route-ids">Routes</a></h4></a>
+<p>Todo</p>
+<a class="header" href="#a-namefield-removal-strategy-idforce-removal-strategya" id="a-namefield-removal-strategy-idforce-removal-strategya"><h4><a name="field-removal-strategy-id">Force Removal Strategy</a></h4></a>
+<p>Todo</p>
+<a class="header" href="#a-nameform-rmarmaa" id="a-nameform-rmarmaa"><h3><a name="form-rma">RMA</a></h3></a>
+<p><img src="../../img/product-category/form-rma.png" alt="" /></p>
+<a class="header" href="#a-namefield-rma-approval-policyrma-approval-policya" id="a-namefield-rma-approval-policyrma-approval-policya"><h4><a name="field-rma-approval-policy">RMA Approval Policy</a></h4></a>
+<p>Mendefinisikan aturan yang akan digunakan untuk melakukan <em>Approval</em>(Persetujuan) RMA. Terbagi atas 2 aturan, yaitu:<br /></p>
+<ul>
+<li><strong>One Step</strong></li>
+<li><strong>Two Step</strong></li>
+</ul>
+<a class="header" href="#a-namefield-rma-customer-operation-idcustomer-rma-operationa" id="a-namefield-rma-customer-operation-idcustomer-rma-operationa"><h4><a name="field-rma-customer-operation-id">Customer RMA Operation</a></h4></a>
+<p>Todo</p>
+<a class="header" href="#a-namefield-rma-supplier-operation-idsupplier-rma-operationa" id="a-namefield-rma-supplier-operation-idsupplier-rma-operationa"><h4><a name="field-rma-supplier-operation-id">Supplier RMA Operation</a></h4></a>
+<p>Todo</p>
+<a class="header" href="#a-nameform-serial-numberserial-numberlot-blockinga" id="a-nameform-serial-numberserial-numberlot-blockinga"><h3><a name="form-serial-number">Serial Number/lot blocking</a></h3></a>
+<p><img src="../../img/product-category/form-serial-number.png" alt="" /></p>
+<a class="header" href="#a-namefield-lot-default-lockblock-new-serial-numberslotsa" id="a-namefield-lot-default-lockblock-new-serial-numberslotsa"><h4><a name="field-lot-default-lock">Block new Serial Numbers/lots</a></h4></a>
+<p>Todo</p>
+<a class="header" href="#a-nameform-account-propertiesaccount-propertiesa" id="a-nameform-account-propertiesaccount-propertiesa"><h3><a name="form-account-properties">Account Properties</a></h3></a>
+<p><img src="../../img/product-category/form-account-properties.png" alt="" /></p>
+<a class="header" href="#a-namefield-property-account-income-categincome-accounta" id="a-namefield-property-account-income-categincome-accounta"><h4><a name="field-property-account-income-categ">Income Account</a></h4></a>
+<p>Mendefinisikan akun <em>Income Account</em></p>
+<a class="header" href="#a-namefield-property-account-expense-categexpense-accounta" id="a-namefield-property-account-expense-categexpense-accounta"><h4><a name="field-property-account-expense-categ">Expense Account</a></h4></a>
+<p>Mendefinisikan akun <em>Expense Account</em></p>
+<a class="header" href="#a-namefield-property-inventory-revaluation-increase-account-categvaluation-increase-accounta" id="a-namefield-property-inventory-revaluation-increase-account-categvaluation-increase-accounta"><h4><a name="field-property-inventory-revaluation-increase-account-categ">Valuation Increase Account</a></h4></a>
+<p>Mendefinisikan akun <em>Valuation Increase Account</em></p>
+<a class="header" href="#a-namefield-property-inventory-revaluation-decrease-account-categvaluation-decrease-accounta" id="a-namefield-property-inventory-revaluation-decrease-account-categvaluation-decrease-accounta"><h4><a name="field-property-inventory-revaluation-decrease-account-categ">Valuation Decrease Account</a></h4></a>
+<p>Mendefinisikan akun <em>Valuation Decrease Account</em></p>
+<a class="header" href="#a-nameform-account-stock-propertiesaccount-stock-propertiesa" id="a-nameform-account-stock-propertiesaccount-stock-propertiesa"><h3><a name="form-account-stock-properties">Account Stock Properties</a></h3></a>
+<p><img src="../../img/product-category/form-account-stock-properties.png" alt="" /></p>
+<a class="header" href="#a-namefield-property-stock-input-account-categstock-input-accounta" id="a-namefield-property-stock-input-account-categstock-input-accounta"><h4><a name="field-property-stock-input-account-categ">Stock Input Account</a></h4></a>
+<p>Mendefinisikan akun <em>Stock Input Account</em></p>
+<a class="header" href="#a-namefield-property-stock-output-account-categstock-output-accounta" id="a-namefield-property-stock-output-account-categstock-output-accounta"><h4><a name="field-property-stock-output-account-categ">Stock Output Account</a></h4></a>
+<p>Mendefinisikan akun <em>Stock Output Account</em></p>
+<a class="header" href="#a-namefield-property-stock-valuation-account-idstock-valuation-accounta" id="a-namefield-property-stock-valuation-account-idstock-valuation-accounta"><h4><a name="field-property-stock-valuation-account-id">Stock Valuation Account</a></h4></a>
+<p>Mendefinisikan akun <em>Stock Valuation Account</em></p>
+<a class="header" href="#a-namefield-property-stock-journalstock-journala" id="a-namefield-property-stock-journalstock-journala"><h4><a name="field-property-stock-journal">Stock Journal</a></h4></a>
+<p>Mendefinisikan akun <em>Stock Journal</em></p>
+<a class="header" href="#a-nameform-quality-controlquality-controla" id="a-nameform-quality-controlquality-controla"><h3><a name="form-quality-control">Quality control</a></h3></a>
+<p><img src="../../img/product-category/form-quality-control.png" alt="" /></p>
+<a class="header" href="#a-namefield-triggertriggera" id="a-namefield-triggertriggera"><h4><a name="field-trigger">Trigger</a></h4></a>
+<p>Todo</p>
+<a class="header" href="#a-namefield-testtesta" id="a-namefield-testtesta"><h4><a name="field-test">Test</a></h4></a>
+<p>Todo</p>
+<a class="header" href="#a-namefield-qc-triggerresponsiblea" id="a-namefield-qc-triggerresponsiblea"><h4><a name="field-qc-trigger">Responsible</a></h4></a>
+<p>User yang bertanggung jawab atas <em>Quality Control</em></p>
+<a class="header" href="#a-namefield-partner-idpartnersa" id="a-namefield-partner-idpartnersa"><h4><a name="field-partner-id">Partners</a></h4></a>
+<p>Mendefinisikan <em>Partner</em></p>
+<a class="header" href="#membuat-data-product-category" id="membuat-data-product-category"><h1>Membuat Data Product Category</h1></a>
+<a class="header" href="#logistics-unit" id="logistics-unit"><h1>Logistics Unit</h1></a>
+<a class="header" href="#penjelasan-6" id="penjelasan-6"><h1>Penjelasan</h1></a>
+<a class="header" href="#a-namebagian-headerheadera-4" id="a-namebagian-headerheadera-4"><h3><a name="bagian-header">HEADER</a></h3></a>
+<p><img src="../../img/logistics-unit/form.png" alt="" /></p>
+<a class="header" href="#a-namefield-namenamea-2" id="a-namefield-namenamea-2"><h4><a name="field-name">Name</a></h4></a>
+<p>Nama unit logistik</p>
+<a class="header" href="#a-namefield-typetypea" id="a-namefield-typetypea"><h4><a name="field-type">Type</a></h4></a>
+<p>Tipe unit logistik</p>
+<a class="header" href="#a-namefield-heightheighta" id="a-namefield-heightheighta"><h4><a name="field-height">Height</a></h4></a>
+<p>Mendefinisikan tinggi unit logistik</p>
+<a class="header" href="#a-namefield-widthwidtha" id="a-namefield-widthwidtha"><h4><a name="field-width">Width</a></h4></a>
+<p>Mendefinisikan lebar unit logistik</p>
+<a class="header" href="#a-namefield-lengthlengtha" id="a-namefield-lengthlengtha"><h4><a name="field-length">Length</a></h4></a>
+<p>Mendefinisikan panjang unit logistik</p>
+<a class="header" href="#a-namefield-weightempty-package-weighta" id="a-namefield-weightempty-package-weighta"><h4><a name="field-weight">Empty Package Weight</a></h4></a>
+<p>Mendefinisikan berat unit logistik</p>
+<a class="header" href="#a-namefield-ul-qtyquantitya" id="a-namefield-ul-qtyquantitya"><h4><a name="field-ul-qty">Quantity</a></h4></a>
+<p>Mendefinisikan kuantitas unit logistik</p>
+<a class="header" href="#a-namefield-productproducta" id="a-namefield-productproducta"><h4><a name="field-product">Product</a></h4></a>
+<p>Mendefinisikan produk unit logistik</p>
+<a class="header" href="#a-namefield-package-by-layerpackage-by-layera" id="a-namefield-package-by-layerpackage-by-layera"><h4><a name="field-package-by-layer">Package by layer</a></h4></a>
+<p>Todo</p>
+<a class="header" href="#a-namefield-number-by-layernumber-of-layersa" id="a-namefield-number-by-layernumber-of-layersa"><h4><a name="field-number-by-layer">Number of layers</a></h4></a>
+<p>Todo</p>
+<a class="header" href="#a-namefield-package-logistic-unitpackage-logistic-unita" id="a-namefield-package-logistic-unitpackage-logistic-unita"><h4><a name="field-package-logistic-unit">Package Logistic Unit</a></h4></a>
+<p>Todo</p>
+<a class="header" href="#a-namefield-qty-by-packagequantity-by-packagea" id="a-namefield-qty-by-packagequantity-by-packagea"><h4><a name="field-qty-by-package">Quantity by Package</a></h4></a>
+<p>Todo</p>
+<a class="header" href="#a-namefield-product-idproducta" id="a-namefield-product-idproducta"><h4><a name="field-product-id">Product</a></h4></a>
+<p>Todo</p>
+<a class="header" href="#a-namefield-package-product-idpackage-producta" id="a-namefield-package-product-idpackage-producta"><h4><a name="field-package-product-id">Package Product</a></h4></a>
+<p>Todo</p>
+<a class="header" href="#membuat-data-logistics-unit" id="membuat-data-logistics-unit"><h1>Membuat Data Logistics Unit</h1></a>
+<ol>
+<li>Buka menu <strong>Product -&gt; Configuration -&gt; Product Categories &amp; Attributes -&gt; Logistic Units</strong></li>
+<li>Klik tombol <strong>Create</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/logistics-unit/tombol-create.png" alt="" /></p>
+<ol start="3">
+<li>Isi <strong><a href="konfigurasi/logistics-unit/./penjelasan.html#field-name">Name</a></strong>. Harus diisi.</li>
+<li>Pilih <strong><a href="konfigurasi/logistics-unit/./penjelasan.html#field-type">Type</a></strong>. Harus diisi.</li>
+<li>Ubah <strong><a href="konfigurasi/logistics-unit/./penjelasan.html#field-height">Height</a></strong> jika dibutuhkan.</li>
+<li>Ubah <strong><a href="konfigurasi/logistics-unit/./penjelasan.html#field-width">Width</a></strong> jika dibutuhkan.</li>
+<li>Ubah <strong><a href="konfigurasi/logistics-unit/./penjelasan.html#field-length">Length</a></strong> jika dibutuhkan.</li>
+<li>Ubah <strong><a href="konfigurasi/logistics-unit/./penjelasan.html#field-weight">Empty Package Weight</a></strong> jika dibutuhkan.</li>
+<li>Ubah <strong><a href="konfigurasi/logistics-unit/./penjelasan.html#field-field-ul-qty">Quantity</a></strong> jika dibutuhkan.</li>
+<li>Pilih <strong><a href="konfigurasi/logistics-unit/./penjelasan.html#field-product">Product</a></strong>. Tidak harus diisi.</li>
+<li>Untuk pengisian <strong>Detail Package</strong>, klik tombol <strong>Add an item</strong></li>
+<li>Isi <strong><a href="konfigurasi/logistics-unit/./penjelasan.html#field-package-by-layer">Package by layer</a></strong>.</li>
+<li>Isi <strong><a href="konfigurasi/logistics-unit/./penjelasan.html#field-number-by-layer">Number of layers</a></strong>.</li>
+<li>Isi <strong><a href="konfigurasi/logistics-unit/./penjelasan.html#field-package-logistic-unit">Package Logistic Unit</a></strong>.</li>
+<li>Isi <strong><a href="konfigurasi/logistics-unit/./penjelasan.html#field-qty-by-package">Quantity by Package</a></strong>.</li>
+<li>Isi <strong><a href="konfigurasi/logistics-unit/./penjelasan.html#field-product-id">Product</a></strong>.</li>
+<li>Isi <strong><a href="konfigurasi/logistics-unit/./penjelasan.html#field-package-product-id">Package Product</a></strong>.</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/logistics-unit/tombol-save.png" alt="" /></p>
+<a class="header" href="#product-brand" id="product-brand"><h1>Product Brand</h1></a>
+<a class="header" href="#penjelasan-7" id="penjelasan-7"><h1>Penjelasan</h1></a>
+<a class="header" href="#a-namebagian-headerheadera-5" id="a-namebagian-headerheadera-5"><h3><a name="bagian-header">HEADER</a></h3></a>
+<p><img src="../../img/product-brand/form.png" alt="" /></p>
+<a class="header" href="#a-namefield-imageimagea-1" id="a-namefield-imageimagea-1"><h4><a name="field-image">Image</a></h4></a>
+<p><img src="../../img/product-brand/image.png" alt="" /><br/>
+Foto/gambar brand produk</p>
+<a class="header" href="#a-namefield-namebrand-namea" id="a-namefield-namebrand-namea"><h4><a name="field-name">Brand Name</a></h4></a>
+<p>Nama brand produk</p>
+<a class="header" href="#a-namefield-partner-idpartnera" id="a-namefield-partner-idpartnera"><h4><a name="field-partner-id">Partner</a></h4></a>
+<p>Partner brand produk</p>
+<a class="header" href="#a-namefield-descriptiondescriptiona" id="a-namefield-descriptiondescriptiona"><h4><a name="field-description">Description</a></h4></a>
+<p>Deskripsi</p>
+<a class="header" href="#membuat-data-product-brand" id="membuat-data-product-brand"><h1>Membuat Data Product Brand</h1></a>
+<ol>
+<li>Buka menu <strong>Product -&gt; Configuration -&gt; Product Categories &amp; Attributes -&gt; Product Brand</strong></li>
+<li>Klik tombol <strong>Create</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/product-brand/tombol-create.png" alt="" /></p>
+<ol start="3">
+<li>Unggah gambar <strong><a href="konfigurasi/product-brand/./penjelasan.html#field-image">Image</a></strong>.</li>
+<li>Isi <strong><a href="konfigurasi/product-brand/./penjelasan.html#field-name">Brand Name</a></strong>. Harus diisi.</li>
+<li>Pilih <strong><a href="konfigurasi/product-brand/./penjelasan.html#field-partner-id">Partner</a></strong>. Tidak harus diisi</li>
+<li>isi <strong><a href="konfigurasi/product-brand/./penjelasan.html#field-description">Description</a></strong>. Tidak harus diisi</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/product-brand/tombol-save.png" alt="" /></p>
+<a class="header" href="#public-product-category" id="public-product-category"><h1>Public Product Category</h1></a>
+<a class="header" href="#penjelasan-8" id="penjelasan-8"><h1>Penjelasan</h1></a>
+<a class="header" href="#a-namebagian-headerheadera-6" id="a-namebagian-headerheadera-6"><h3><a name="bagian-header">HEADER</a></h3></a>
+<p><img src="../../img/public-product-category/form.png" alt="" /></p>
+<a class="header" href="#a-namefield-namenamea-3" id="a-namefield-namenamea-3"><h4><a name="field-name">Name</a></h4></a>
+<p>Nama kategori produk publik</p>
+<a class="header" href="#a-namefield-imageimagea-2" id="a-namefield-imageimagea-2"><h4><a name="field-image">Image</a></h4></a>
+<p><img src="../../img/public-product-category/image.png" alt="" /><br/>
+Foto/gambar kategori produk publik</p>
+<a class="header" href="#a-namefield-parent-idparent-categorya-1" id="a-namefield-parent-idparent-categorya-1"><h4><a name="field-parent-id">Parent Category</a></h4></a>
+<p>Parent/induk kategori produk publik</p>
+<a class="header" href="#a-namefield-sequencesequencea" id="a-namefield-sequencesequencea"><h4><a name="field-sequence">Sequence</a></h4></a>
+<p>No. Urut</p>
+<a class="header" href="#membuat-data-public-product-category" id="membuat-data-public-product-category"><h1>Membuat Data Public Product Category</h1></a>
+<ol>
+<li>Buka menu <strong>Product -&gt; Configuration -&gt; Product Categories &amp; Attributes -&gt; Public Product Category</strong></li>
+<li>Klik tombol <strong>Create</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/public-product-category/tombol-create.png" alt="" /></p>
+<ol start="3">
+<li>Isi <strong><a href="konfigurasi/public-product-category/./penjelasan.html#field-name">Name</a></strong>. Harus diisi.</li>
+<li>Unggah gambar <strong><a href="konfigurasi/public-product-category/./penjelasan.html#field-image">Image</a></strong>.</li>
+<li>Pilih <strong><a href="konfigurasi/public-product-category/./penjelasan.html#field-parent-id">Parent Category</a></strong>. Tidak harus diisi</li>
+<li>Ubah <strong><a href="konfigurasi/public-product-category/./penjelasan.html#field-sequence">Sequence</a></strong> jika dibutuhkan.</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/public-product-category/tombol-save.png" alt="" /></p>
+<a class="header" href="#pricelist-type" id="pricelist-type"><h1>Pricelist Type</h1></a>
+<a class="header" href="#penjelasan-9" id="penjelasan-9"><h1>Penjelasan</h1></a>
+<a class="header" href="#a-namebagian-headerheadera-7" id="a-namebagian-headerheadera-7"><h3><a name="bagian-header">HEADER</a></h3></a>
+<p><img src="../../img/pricelist-type/form.png" alt="" /></p>
+<a class="header" href="#a-namefield-namenamea-4" id="a-namefield-namenamea-4"><h4><a name="field-name">Name</a></h4></a>
+<p>Nama tipe pricelist/daftar harga</p>
+<a class="header" href="#a-namefield-keykeya" id="a-namefield-keykeya"><h4><a name="field-key">Key</a></h4></a>
+<p>Kode/Nilai unik untuk tipe pricelist/daftar harga</p>
+<a class="header" href="#membuat-data-pricelist-type" id="membuat-data-pricelist-type"><h1>Membuat Data Pricelist Type</h1></a>
+<ol>
+<li>Buka menu <strong>Product -&gt; Configuration -&gt; Pricelist -&gt; Pricelist Types</strong></li>
+<li>Klik tombol <strong>Create</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/pricelist-type/tombol-create.png" alt="" /></p>
+<ol start="3">
+<li>Isi <strong><a href="konfigurasi/pricelist-type/./penjelasan.html#field-name">Name</a></strong>. Harus diisi.</li>
+<li>Isi <strong><a href="konfigurasi/pricelist-type/./penjelasan.html#field-key">Key</a></strong>. Harus diisi</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/pricelist-type/tombol-save.png" alt="" /></p>
+<a class="header" href="#pricelist-version" id="pricelist-version"><h1>Pricelist Version</h1></a>
+<a class="header" href="#penjelasan-10" id="penjelasan-10"><h1>Penjelasan</h1></a>
+<a class="header" href="#a-namebagian-headerheadera-8" id="a-namebagian-headerheadera-8"><h3><a name="bagian-header">HEADER</a></h3></a>
+<p><img src="../../img/pricelist-versions/header.png" alt="" /></p>
+<a class="header" href="#a-namefield-namenamea-5" id="a-namefield-namenamea-5"><h4><a name="field-name">Name</a></h4></a>
+<p>Nama versi <em>Pricelist</em>(daftar harga)</p>
+<a class="header" href="#a-namefield-pricelist-idprice-lista" id="a-namefield-pricelist-idprice-lista"><h4><a name="field-pricelist-id">Price List</a></h4></a>
+<p>Mendefinisikan <em>Pricelist</em>(daftar harga)</p>
+<a class="header" href="#a-namefield-date-startstart-datea" id="a-namefield-date-startstart-datea"><h4><a name="field-date-start">Start Date</a></h4></a>
+<p>Tanggal valid dimulainya versi <em>Pricelist</em>(daftar harga)</p>
+<a class="header" href="#a-namefield-date-endend-datea" id="a-namefield-date-endend-datea"><h4><a name="field-date-end">End Date</a></h4></a>
+<p>Tanggal valid berakhirnya versi <em>Pricelist</em>(daftar harga)</p>
+<a class="header" href="#a-namefield-activeactivea-1" id="a-namefield-activeactivea-1"><h4><a name="field-active">Active</a></h4></a>
+<p>Sebagai penanda apakah data adalah aktif/non-aktif</p>
+<a class="header" href="#a-namebagian-headerdetail-item-lista" id="a-namebagian-headerdetail-item-lista"><h3><a name="bagian-header">DETAIL ITEM LIST</a></h3></a>
+<p><img src="../../img/pricelist-versions/detail-item-list.png" alt="" />
+<img src="../../img/pricelist-versions/detail-item-list-form.png" alt="" /></p>
+<a class="header" href="#a-namefield-detail-item-list-namerule-namea" id="a-namefield-detail-item-list-namerule-namea"><h4><a name="field-detail-item-list-name">Rule Name</a></h4></a>
+<p>Nama <em>Rule</em>(Aturan)</p>
+<a class="header" href="#a-namefield-detail-item-list-product-idproducta" id="a-namefield-detail-item-list-product-idproducta"><h4><a name="field-detail-item-list-product-id">Product</a></h4></a>
+<p>Mendefinisikan produk yang akan digunakan</p>
+<a class="header" href="#a-namefield-detail-item-list-product-categ-idproduct-categorya" id="a-namefield-detail-item-list-product-categ-idproduct-categorya"><h4><a name="field-detail-item-list-product-categ-id">Product Category</a></h4></a>
+<p>Mendefinisikan kategori produk yang akan digunakan</p>
+<a class="header" href="#a-namefield-detail-item-list-product-tmpl-idproduct-templatea" id="a-namefield-detail-item-list-product-tmpl-idproduct-templatea"><h4><a name="field-detail-item-list-product-tmpl-id">Product Template</a></h4></a>
+<p>Mendefinisikan template produk yang akan digunakan</p>
+<a class="header" href="#a-namefield-detail-item-list-min-quantitymin-quantitya" id="a-namefield-detail-item-list-min-quantitymin-quantitya"><h4><a name="field-detail-item-list-min-quantity">Min. Quantity</a></h4></a>
+<p>Mendefinisikan minimum kuantiti</p>
+<a class="header" href="#a-namefield-detail-item-list-sequencesequencea" id="a-namefield-detail-item-list-sequencesequencea"><h4><a name="field-detail-item-list-sequence">Sequence</a></h4></a>
+<p>No. Urut</p>
+<a class="header" href="#a-namefield-detail-item-list-basebased-ona" id="a-namefield-detail-item-list-basebased-ona"><h4><a name="field-detail-item-list-base">Based on</a></h4></a>
+<p>Mendefinisikan berdasarkan apa versi <em>Pricelist</em>(Daftar Harga) akan dihitung. <em>Based on</em> dibagi atas 4, yaitu:<br /></p>
+<ul>
+<li>Public Price</li>
+<li>Cost Price</li>
+<li>Other Pricelist</li>
+<li>Supplier Prices on the product form</li>
+</ul>
+<a class="header" href="#a-namefield-detail-item-list-base-pricelist-idother-pricelista" id="a-namefield-detail-item-list-base-pricelist-idother-pricelista"><h4><a name="field-detail-item-list-base-pricelist-id">Other Pricelist</a></h4></a>
+<p>Mendefinisikan <em>Other Pricelist</em>.</p>
+<blockquote>
+<p><strong>Catatan:</strong> Isian <em>Other Pricelist</em> akan muncul apabila nilai <em>Based On</em> yang dipilih adalah <em>Other Pricelist</em></p>
+</blockquote>
+<a class="header" href="#a-namefield-detail-item-list-formulaformulaa" id="a-namefield-detail-item-list-formulaformulaa"><h4><a name="field-detail-item-list-formula">Formula</a></h4></a>
+<p><img src="../../img/pricelist-versions/formula.png" alt="" /></p>
+<p>Formula perhitungan untuk harga</p>
+<a class="header" href="#a-namefield-detail-item-list-price-roundrounding-methoda" id="a-namefield-detail-item-list-price-roundrounding-methoda"><h4><a name="field-detail-item-list-price-round">Rounding Method</a></h4></a>
+<p>Mendefinisikan format/metode pembulatan</p>
+<a class="header" href="#a-namefield-detail-item-list-price-min-marginmin-margina" id="a-namefield-detail-item-list-price-min-marginmin-margina"><h4><a name="field-detail-item-list-price-min-margin">Min. Margin</a></h4></a>
+<p>Mendefinisikan minimal margin</p>
+<a class="header" href="#a-namefield-detail-item-list-price-max-marginmax-margina" id="a-namefield-detail-item-list-price-max-marginmax-margina"><h4><a name="field-detail-item-list-price-max-margin">Max. Margin</a></h4></a>
+<p>Mendefinisikan maksimum margin</p>
+<a class="header" href="#membuat-data-pricelist-version" id="membuat-data-pricelist-version"><h1>Membuat Data Pricelist Version</h1></a>
+<a class="header" href="#hazard-pictogram" id="hazard-pictogram"><h1>Hazard Pictogram</h1></a>
+<a class="header" href="#penjelasan-11" id="penjelasan-11"><h1>Penjelasan</h1></a>
+<a class="header" href="#a-namebagian-headerheadera-9" id="a-namebagian-headerheadera-9"><h3><a name="bagian-header">HEADER</a></h3></a>
+<p><img src="../../img/hazard-pictogram/form.png" alt="" /></p>
+<a class="header" href="#a-namefield-namehazard-statementa" id="a-namefield-namehazard-statementa"><h4><a name="field-name">Hazard Statement</a></h4></a>
+<p>Mendefinisikan <em>Hazard Statement</em>(pernyataan bahaya)</p>
+<a class="header" href="#a-namefield-imageimagea-3" id="a-namefield-imageimagea-3"><h4><a name="field-image">Image</a></h4></a>
+<p><img src="../../img/product-brand/image.png" alt="" /><br/>
+Foto/gambar <em>Hazard Pictogram</em></p>
+<a class="header" href="#a-namefield-codecodea" id="a-namefield-codecodea"><h4><a name="field-code">Code</a></h4></a>
+<p>Kode <em>Hazard Pictogram</em></p>
+<a class="header" href="#a-namefield-activeactivea-2" id="a-namefield-activeactivea-2"><h4><a name="field-active">Active</a></h4></a>
+<p>Sebagai penanda apakah data adalah aktif/non-aktif</p>
+<a class="header" href="#a-namefield-descriptiondescriptiona-1" id="a-namefield-descriptiondescriptiona-1"><h4><a name="field-description">Description</a></h4></a>
+<p>Deskripsi</p>
+<a class="header" href="#membuat-data-hazard-pictogram" id="membuat-data-hazard-pictogram"><h1>Membuat Data Hazard Pictogram</h1></a>
+<ol>
+<li>Buka menu <strong>Product -&gt; Configuration -&gt; GHS Hazard Information -&gt; Hazard Pictogram</strong></li>
+<li>Klik tombol <strong>Create</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/hazard-pictogram/tombol-create.png" alt="" /></p>
+<ol start="3">
+<li>Isi <strong><a href="konfigurasi/hazard-pictogram/./penjelasan.html#field-name">Hazard Statement</a></strong>. Harus diisi.</li>
+<li>Unggah gambar <strong><a href="konfigurasi/hazard-pictogram/./penjelasan.html#field-image">Image</a></strong>.</li>
+<li>Isi <strong><a href="konfigurasi/hazard-pictogram/./penjelasan.html#field-code">Code</a></strong>. Harus Diisi</li>
+<li>Ubah <strong><a href="konfigurasi/hazard-pictogram/./penjelasan.html#field-active">Active</a></strong> jika dibutuhkan.</li>
+<li>isi <strong><a href="konfigurasi/hazard-pictogram/./penjelasan.html#field-description">Description</a></strong>. Tidak harus diisi</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/hazard-pictogram/tombol-save.png" alt="" /></p>
+<a class="header" href="#hazard-precautionary-statement" id="hazard-precautionary-statement"><h1>Hazard Precautionary Statement</h1></a>
+<a class="header" href="#penjelasan-12" id="penjelasan-12"><h1>Penjelasan</h1></a>
+<a class="header" href="#a-namebagian-headerheadera-10" id="a-namebagian-headerheadera-10"><h3><a name="bagian-header">HEADER</a></h3></a>
+<p><img src="../../img/hazard-precautionary-statement/form.png" alt="" /></p>
+<a class="header" href="#a-namefield-namehazard-precautionary-statementa" id="a-namefield-namehazard-precautionary-statementa"><h4><a name="field-name">Hazard Precautionary Statement</a></h4></a>
+<p>Mendefinisikan <em>Hazard Precautionary Statement</em>(pernyataan pencegahan bahaya)</p>
+<a class="header" href="#a-namefield-codecodea-1" id="a-namefield-codecodea-1"><h4><a name="field-code">Code</a></h4></a>
+<p>Kode <em>Hazard Precautionary Statement</em></p>
+<a class="header" href="#a-namefield-activeactivea-3" id="a-namefield-activeactivea-3"><h4><a name="field-active">Active</a></h4></a>
+<p>Sebagai penanda apakah data adalah aktif/non-aktif</p>
+<a class="header" href="#a-namefield-descriptiondescriptiona-2" id="a-namefield-descriptiondescriptiona-2"><h4><a name="field-description">Description</a></h4></a>
+<p>Deskripsi</p>
+<a class="header" href="#membuat-data-hazard-precautionary-statement" id="membuat-data-hazard-precautionary-statement"><h1>Membuat Data Hazard Precautionary Statement</h1></a>
+<ol>
+<li>Buka menu <strong>Product -&gt; Configuration -&gt; GHS Hazard Information -&gt; Hazard Precautionary Statement</strong></li>
+<li>Klik tombol <strong>Create</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/hazard-precautionary-statement/tombol-create.png" alt="" /></p>
+<ol start="3">
+<li>Isi <strong><a href="konfigurasi/hazard-precautionary-statement/./penjelasan.html#field-name">Hazard Precautionary Statement</a></strong>. Harus diisi.</li>
+<li>Isi <strong><a href="konfigurasi/hazard-precautionary-statement/./penjelasan.html#field-code">Code</a></strong>. Harus Diisi</li>
+<li>Ubah <strong><a href="konfigurasi/hazard-precautionary-statement/./penjelasan.html#field-active">Active</a></strong> jika dibutuhkan.</li>
+<li>isi <strong><a href="konfigurasi/hazard-precautionary-statement/./penjelasan.html#field-description">Description</a></strong>. Tidak harus diisi</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/hazard-precautionary-statement/tombol-save.png" alt="" /></p>
+<a class="header" href="#hazard-statement" id="hazard-statement"><h1>Hazard Statement</h1></a>
+<a class="header" href="#penjelasan-13" id="penjelasan-13"><h1>Penjelasan</h1></a>
+<a class="header" href="#a-namebagian-headerheadera-11" id="a-namebagian-headerheadera-11"><h3><a name="bagian-header">HEADER</a></h3></a>
+<p><img src="../../img/hazard-statement/form.png" alt="" /></p>
+<a class="header" href="#a-namefield-namehazard-statementa-1" id="a-namefield-namehazard-statementa-1"><h4><a name="field-name">Hazard Statement</a></h4></a>
+<p>Mendefinisikan <em>Hazard Statement</em>(pernyataan bahaya)</p>
+<a class="header" href="#a-namefield-codecodea-2" id="a-namefield-codecodea-2"><h4><a name="field-code">Code</a></h4></a>
+<p>Kode <em>Hazard Statement</em></p>
+<a class="header" href="#a-namefield-activeactivea-4" id="a-namefield-activeactivea-4"><h4><a name="field-active">Active</a></h4></a>
+<p>Sebagai penanda apakah data adalah aktif/non-aktif</p>
+<a class="header" href="#a-namefield-descriptiondescriptiona-3" id="a-namefield-descriptiondescriptiona-3"><h4><a name="field-description">Description</a></h4></a>
+<p>Deskripsi</p>
+<a class="header" href="#membuat-data-hazard-statement" id="membuat-data-hazard-statement"><h1>Membuat Data Hazard Statement</h1></a>
+<ol>
+<li>Buka menu <strong>Product -&gt; Configuration -&gt; GHS Hazard Information -&gt; Hazard Statement</strong></li>
+<li>Klik tombol <strong>Create</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/hazard-statement/tombol-create.png" alt="" /></p>
+<ol start="3">
+<li>Isi <strong><a href="konfigurasi/hazard-statement/./penjelasan.html#field-name">Hazard Statement</a></strong>. Harus diisi.</li>
+<li>Isi <strong><a href="konfigurasi/hazard-statement/./penjelasan.html#field-code">Code</a></strong>. Harus Diisi</li>
+<li>Ubah <strong><a href="konfigurasi/hazard-statement/./penjelasan.html#field-active">Active</a></strong> jika dibutuhkan.</li>
+<li>isi <strong><a href="konfigurasi/hazard-statement/./penjelasan.html#field-description">Description</a></strong>. Tidak harus diisi</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/hazard-statement/tombol-save.png" alt="" /></p>
+<a class="header" href="#ec-number-category" id="ec-number-category"><h1>EC Number Category</h1></a>
+<a class="header" href="#penjelasan-14" id="penjelasan-14"><h1>Penjelasan</h1></a>
+<blockquote>
+<p><strong>Catatan:</strong> (Inggris: <em>European Community</em> number disingkat EC number)</p>
+</blockquote>
+<a class="header" href="#a-namebagian-headerheadera-12" id="a-namebagian-headerheadera-12"><h3><a name="bagian-header">HEADER</a></h3></a>
+<p><img src="../../img/ec-number-category/form.png" alt="" /></p>
+<a class="header" href="#a-namefield-nameec-number-categorya" id="a-namefield-nameec-number-categorya"><h4><a name="field-name">EC Number Category</a></h4></a>
+<p>Mendefinisikan kategori <em>EC Number</em></p>
+<a class="header" href="#a-namefield-codecodea-3" id="a-namefield-codecodea-3"><h4><a name="field-code">Code</a></h4></a>
+<p>Kode kategori <em>EC Number</em></p>
+<a class="header" href="#a-namefield-activeactivea-5" id="a-namefield-activeactivea-5"><h4><a name="field-active">Active</a></h4></a>
+<p>Sebagai penanda apakah data adalah aktif/non-aktif</p>
+<a class="header" href="#a-namefield-descriptiondescriptiona-4" id="a-namefield-descriptiondescriptiona-4"><h4><a name="field-description">Description</a></h4></a>
+<p>Deskripsi</p>
+<a class="header" href="#membuat-data-ec-number-category" id="membuat-data-ec-number-category"><h1>Membuat Data EC Number Category</h1></a>
+<ol>
+<li>Buka menu <strong>Product -&gt; Configuration -&gt; EC Information -&gt; EC Number Category</strong></li>
+<li>Klik tombol <strong>Create</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/ec-number-category/tombol-create.png" alt="" /></p>
+<ol start="3">
+<li>Isi <strong><a href="konfigurasi/ec-number-category/./penjelasan.html#field-name">EC Number Category</a></strong>. Harus diisi.</li>
+<li>Isi <strong><a href="konfigurasi/ec-number-category/./penjelasan.html#field-code">Code</a></strong>. Harus Diisi</li>
+<li>Ubah <strong><a href="konfigurasi/ec-number-category/./penjelasan.html#field-active">Active</a></strong> jika dibutuhkan.</li>
+<li>isi <strong><a href="konfigurasi/ec-number-category/./penjelasan.html#field-description">Description</a></strong>. Tidak harus diisi</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/ec-number-category/tombol-save.png" alt="" /></p>
+<a class="header" href="#ec-number" id="ec-number"><h1>EC Number</h1></a>
+<a class="header" href="#penjelasan-15" id="penjelasan-15"><h1>Penjelasan</h1></a>
+<blockquote>
+<p><strong>Catatan:</strong> (Inggris: <em>European Community</em> number disingkat EC number)</p>
+</blockquote>
+<a class="header" href="#a-namebagian-headerheadera-13" id="a-namebagian-headerheadera-13"><h3><a name="bagian-header">HEADER</a></h3></a>
+<p><img src="../../img/ec-number/form.png" alt="" /></p>
+<a class="header" href="#a-namefield-nameec-numbera" id="a-namefield-nameec-numbera"><h4><a name="field-name">EC Number</a></h4></a>
+<p>Mendefinisikan <em>EC Number</em></p>
+<a class="header" href="#a-namefield-codecodea-4" id="a-namefield-codecodea-4"><h4><a name="field-code">Code</a></h4></a>
+<p>Kode <em>EC Number</em></p>
+<a class="header" href="#a-namefield-category-idcategorya" id="a-namefield-category-idcategorya"><h4><a name="field-category-id">Category</a></h4></a>
+<p>Mendefinisikan kategori <em>EC Number</em></p>
+<a class="header" href="#a-namefield-activeactivea-6" id="a-namefield-activeactivea-6"><h4><a name="field-active">Active</a></h4></a>
+<p>Sebagai penanda apakah data adalah aktif/non-aktif</p>
+<a class="header" href="#a-namefield-descriptiondescriptiona-5" id="a-namefield-descriptiondescriptiona-5"><h4><a name="field-description">Description</a></h4></a>
+<p>Deskripsi</p>
+<a class="header" href="#membuat-data-ec-number" id="membuat-data-ec-number"><h1>Membuat Data EC Number</h1></a>
+<ol>
+<li>Buka menu <strong>Product -&gt; Configuration -&gt; EC Information -&gt; EC Number</strong></li>
+<li>Klik tombol <strong>Create</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/ec-number/tombol-create.png" alt="" /></p>
+<ol start="3">
+<li>Isi <strong><a href="konfigurasi/ec-number/./penjelasan.html#field-name">EC Number</a></strong>. Harus diisi.</li>
+<li>Isi <strong><a href="konfigurasi/ec-number/./penjelasan.html#field-code">Code</a></strong>. Harus Diisi</li>
+<li>Pilih <strong><a href="konfigurasi/ec-number/./penjelasan.html#field-category-id">Category</a></strong>. Harus diisi.</li>
+<li>Ubah <strong><a href="konfigurasi/ec-number/./penjelasan.html#field-active">Active</a></strong> jika dibutuhkan.</li>
+<li>isi <strong><a href="konfigurasi/ec-number/./penjelasan.html#field-description">Description</a></strong>. Tidak harus diisi</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/ec-number/tombol-save.png" alt="" /></p>
+<a class="header" href="#cas-registry" id="cas-registry"><h1>CAS Registry</h1></a>
+<a class="header" href="#penjelasan-16" id="penjelasan-16"><h1>Penjelasan</h1></a>
+<blockquote>
+<p><strong>Catatan:</strong> (Inggris: <em>Chemical Abstracts Service</em> registry disingkat CAS Registry)</p>
+</blockquote>
+<a class="header" href="#a-namebagian-headerheadera-14" id="a-namebagian-headerheadera-14"><h3><a name="bagian-header">HEADER</a></h3></a>
+<p><img src="../../img/cas-registry/form.png" alt="" /></p>
+<a class="header" href="#a-namefield-namecas-registrya" id="a-namefield-namecas-registrya"><h4><a name="field-name">CAS Registry</a></h4></a>
+<p>Mendefinisikan nomor <em>CAS</em></p>
+<a class="header" href="#a-namefield-codecodea-5" id="a-namefield-codecodea-5"><h4><a name="field-code">Code</a></h4></a>
+<p>Kode <em>CAS</em></p>
+<a class="header" href="#a-namefield-activeactivea-7" id="a-namefield-activeactivea-7"><h4><a name="field-active">Active</a></h4></a>
+<p>Sebagai penanda apakah data adalah aktif/non-aktif</p>
+<a class="header" href="#a-namefield-descriptiondescriptiona-6" id="a-namefield-descriptiondescriptiona-6"><h4><a name="field-description">Description</a></h4></a>
+<p>Deskripsi</p>
+<a class="header" href="#membuat-data-cas-registry" id="membuat-data-cas-registry"><h1>Membuat Data CAS Registry</h1></a>
+<ol>
+<li>Buka menu <strong>Product -&gt; Configuration -&gt; CAS Information -&gt; CAS Registry</strong></li>
+<li>Klik tombol <strong>Create</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/cas-registry/tombol-create.png" alt="" /></p>
+<ol start="3">
+<li>Isi <strong><a href="konfigurasi/cas-registry/./penjelasan.html#field-name">CAS Registry</a></strong>. Harus diisi.</li>
+<li>Isi <strong><a href="konfigurasi/cas-registry/./penjelasan.html#field-code">Code</a></strong>. Harus Diisi</li>
+<li>Ubah <strong><a href="konfigurasi/cas-registry/./penjelasan.html#field-active">Active</a></strong> jika dibutuhkan.</li>
+<li>isi <strong><a href="konfigurasi/cas-registry/./penjelasan.html#field-description">Description</a></strong>. Tidak harus diisi</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/cas-registry/tombol-save.png" alt="" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
