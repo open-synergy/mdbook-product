@@ -1,9 +1,11 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js">
+<html lang="en" class="sidebar-visible no-js light">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Membuat Data Hazard Statement - Odoo - Product Management</title>
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,11 +32,11 @@
 
         
     </head>
-    <body class="light">
+    <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "../../";
-            var default_theme = "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -56,10 +58,13 @@
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script type="text/javascript">
             var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            document.body.className = theme;
-            document.querySelector('html').className = theme + ' js';
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
@@ -75,44 +80,46 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li><a href="../../product.html"><strong aria-hidden="true">1.</strong> Product</a></li><li><ol class="section"><li><a href="../../product/penjelasan.html"><strong aria-hidden="true">1.1.</strong> Penjelasan</a></li><li><a href="../../product/membuat-data-product-template.html"><strong aria-hidden="true">1.2.</strong> Membuat Data Product Template</a></li></ol></li><li><a href="../../pricelist.html"><strong aria-hidden="true">2.</strong> Pricelist</a></li><li><ol class="section"><li><a href="../../pricelist/purchase-pricelist.html"><strong aria-hidden="true">2.1.</strong> Purchase Pricelist</a></li><li><ol class="section"><li><a href="../../pricelist/purchase-pricelist/penjelasan.html"><strong aria-hidden="true">2.1.1.</strong> Penjelasan</a></li><li><a href="../../pricelist/purchase-pricelist/membuat-data-purchase-pricelist.html"><strong aria-hidden="true">2.1.2.</strong> Membuat Data Purchase Pricelist</a></li></ol></li><li><a href="../../pricelist/sale-pricelist.html"><strong aria-hidden="true">2.2.</strong> Sale Pricelist</a></li><li><ol class="section"><li><a href="../../pricelist/sale-pricelist/penjelasan.html"><strong aria-hidden="true">2.2.1.</strong> Penjelasan</a></li><li><a href="../../pricelist/sale-pricelist/membuat-data-sale-pricelist.html"><strong aria-hidden="true">2.2.2.</strong> Membuat Data Sale Pricelist</a></li></ol></li></ol></li><li><a href="../../konfigurasi.html"><strong aria-hidden="true">3.</strong> Konfigurasi</a></li><li><ol class="section"><li><a href="../../konfigurasi/uom-category.html"><strong aria-hidden="true">3.1.</strong> UoM Category</a></li><li><ol class="section"><li><a href="../../konfigurasi/uom-category/penjelasan.html"><strong aria-hidden="true">3.1.1.</strong> Penjelasan</a></li><li><a href="../../konfigurasi/uom-category/membuat-data-uom-category.html"><strong aria-hidden="true">3.1.2.</strong> Membuat Data UoM Category</a></li></ol></li><li><a href="../../konfigurasi/uom.html"><strong aria-hidden="true">3.2.</strong> UoM</a></li><li><ol class="section"><li><a href="../../konfigurasi/uom/penjelasan.html"><strong aria-hidden="true">3.2.1.</strong> Penjelasan</a></li><li><a href="../../konfigurasi/uom/membuat-data-uom.html"><strong aria-hidden="true">3.2.2.</strong> Membuat Data UoM</a></li></ol></li><li><a href="../../konfigurasi/product-category.html"><strong aria-hidden="true">3.3.</strong> Product Category</a></li><li><ol class="section"><li><a href="../../konfigurasi/product-category/penjelasan.html"><strong aria-hidden="true">3.3.1.</strong> Penjelasan</a></li><li><a href="../../konfigurasi/product-category/membuat-data-product-category.html"><strong aria-hidden="true">3.3.2.</strong> Membuat Data Product Category</a></li></ol></li><li><a href="../../konfigurasi/logistics-unit.html"><strong aria-hidden="true">3.4.</strong> Logistics Unit</a></li><li><ol class="section"><li><a href="../../konfigurasi/logistics-unit/penjelasan.html"><strong aria-hidden="true">3.4.1.</strong> Penjelasan</a></li><li><a href="../../konfigurasi/logistics-unit/membuat-data-logistic-unit.html"><strong aria-hidden="true">3.4.2.</strong> Membuat Data Logistics Unit</a></li></ol></li><li><a href="../../konfigurasi/product-brand.html"><strong aria-hidden="true">3.5.</strong> Product Brand</a></li><li><ol class="section"><li><a href="../../konfigurasi/product-brand/penjelasan.html"><strong aria-hidden="true">3.5.1.</strong> Penjelasan</a></li><li><a href="../../konfigurasi/product-brand/membuat-data-product-brand.html"><strong aria-hidden="true">3.5.2.</strong> Membuat Data Product Brand</a></li></ol></li><li><a href="../../konfigurasi/public-product-category.html"><strong aria-hidden="true">3.6.</strong> Public Product Category</a></li><li><ol class="section"><li><a href="../../konfigurasi/public-product-category/penjelasan.html"><strong aria-hidden="true">3.6.1.</strong> Penjelasan</a></li><li><a href="../../konfigurasi/public-product-category/membuat-data-public-product-category.html"><strong aria-hidden="true">3.6.2.</strong> Membuat Data Public Product Category</a></li></ol></li><li><a href="../../konfigurasi/pricelist-type.html"><strong aria-hidden="true">3.7.</strong> Pricelist Type</a></li><li><ol class="section"><li><a href="../../konfigurasi/pricelist-type/penjelasan.html"><strong aria-hidden="true">3.7.1.</strong> Penjelasan</a></li><li><a href="../../konfigurasi/pricelist-type/membuat-data-pricelist-type.html"><strong aria-hidden="true">3.7.2.</strong> Membuat Data Pricelist Type</a></li></ol></li><li><a href="../../konfigurasi/pricelist-version.html"><strong aria-hidden="true">3.8.</strong> Pricelist Version</a></li><li><ol class="section"><li><a href="../../konfigurasi/pricelist-version/penjelasan.html"><strong aria-hidden="true">3.8.1.</strong> Penjelasan</a></li><li><a href="../../konfigurasi/pricelist-version/membuat-data-pricelist-version.html"><strong aria-hidden="true">3.8.2.</strong> Membuat Data Pricelist Version</a></li></ol></li><li><a href="../../konfigurasi/hazard-pictogram.html"><strong aria-hidden="true">3.9.</strong> Hazard Pictogram</a></li><li><ol class="section"><li><a href="../../konfigurasi/hazard-pictogram/penjelasan.html"><strong aria-hidden="true">3.9.1.</strong> Penjelasan</a></li><li><a href="../../konfigurasi/hazard-pictogram/membuat-data-hazard-pictogram.html"><strong aria-hidden="true">3.9.2.</strong> Membuat Data Hazard Pictogram</a></li></ol></li><li><a href="../../konfigurasi/hazard-precautionary-statement.html"><strong aria-hidden="true">3.10.</strong> Hazard Precautionary Statement</a></li><li><ol class="section"><li><a href="../../konfigurasi/hazard-precautionary-statement/penjelasan.html"><strong aria-hidden="true">3.10.1.</strong> Penjelasan</a></li><li><a href="../../konfigurasi/hazard-precautionary-statement/membuat-data-hazard-precautionary-statement.html"><strong aria-hidden="true">3.10.2.</strong> Membuat Data Hazard Precautionary Statement</a></li></ol></li><li><a href="../../konfigurasi/hazard-statement.html"><strong aria-hidden="true">3.11.</strong> Hazard Statement</a></li><li><ol class="section"><li><a href="../../konfigurasi/hazard-statement/penjelasan.html"><strong aria-hidden="true">3.11.1.</strong> Penjelasan</a></li><li><a href="../../konfigurasi/hazard-statement/membuat-data-hazard-statement.html" class="active"><strong aria-hidden="true">3.11.2.</strong> Membuat Data Hazard Statement</a></li></ol></li><li><a href="../../konfigurasi/ec-number-category.html"><strong aria-hidden="true">3.12.</strong> EC Number Category</a></li><li><ol class="section"><li><a href="../../konfigurasi/ec-number-category/penjelasan.html"><strong aria-hidden="true">3.12.1.</strong> Penjelasan</a></li><li><a href="../../konfigurasi/ec-number-category/membuat-data-ec-number-category.html"><strong aria-hidden="true">3.12.2.</strong> Membuat Data EC Number Category</a></li></ol></li><li><a href="../../konfigurasi/ec-number.html"><strong aria-hidden="true">3.13.</strong> EC Number</a></li><li><ol class="section"><li><a href="../../konfigurasi/ec-number/penjelasan.html"><strong aria-hidden="true">3.13.1.</strong> Penjelasan</a></li><li><a href="../../konfigurasi/ec-number/membuat-data-ec-number.html"><strong aria-hidden="true">3.13.2.</strong> Membuat Data EC Number</a></li></ol></li><li><a href="../../konfigurasi/cas-registry.html"><strong aria-hidden="true">3.14.</strong> CAS Registry</a></li><li><ol class="section"><li><a href="../../konfigurasi/cas-registry/penjelasan.html"><strong aria-hidden="true">3.14.1.</strong> Penjelasan</a></li><li><a href="../../konfigurasi/cas-registry/membuat-data-cas-registry.html"><strong aria-hidden="true">3.14.2.</strong> Membuat Data CAS Registry</a></li></ol></li></ol></li></ol>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../product.html"><strong aria-hidden="true">1.</strong> Product</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../product/penjelasan.html"><strong aria-hidden="true">1.1.</strong> Penjelasan</a></li><li class="chapter-item expanded "><a href="../../product/membuat-data-product-template.html"><strong aria-hidden="true">1.2.</strong> Membuat Data Product Template</a></li></ol></li><li class="chapter-item expanded "><a href="../../pricelist.html"><strong aria-hidden="true">2.</strong> Pricelist</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../pricelist/purchase-pricelist.html"><strong aria-hidden="true">2.1.</strong> Purchase Pricelist</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../pricelist/purchase-pricelist/penjelasan.html"><strong aria-hidden="true">2.1.1.</strong> Penjelasan</a></li><li class="chapter-item expanded "><a href="../../pricelist/purchase-pricelist/membuat-data-purchase-pricelist.html"><strong aria-hidden="true">2.1.2.</strong> Membuat Data Purchase Pricelist</a></li></ol></li><li class="chapter-item expanded "><a href="../../pricelist/sale-pricelist.html"><strong aria-hidden="true">2.2.</strong> Sale Pricelist</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../pricelist/sale-pricelist/penjelasan.html"><strong aria-hidden="true">2.2.1.</strong> Penjelasan</a></li><li class="chapter-item expanded "><a href="../../pricelist/sale-pricelist/membuat-data-sale-pricelist.html"><strong aria-hidden="true">2.2.2.</strong> Membuat Data Sale Pricelist</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../konfigurasi.html"><strong aria-hidden="true">3.</strong> Konfigurasi</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/uom-category.html"><strong aria-hidden="true">3.1.</strong> UoM Category</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/uom-category/penjelasan.html"><strong aria-hidden="true">3.1.1.</strong> Penjelasan</a></li><li class="chapter-item expanded "><a href="../../konfigurasi/uom-category/membuat-data-uom-category.html"><strong aria-hidden="true">3.1.2.</strong> Membuat Data UoM Category</a></li></ol></li><li class="chapter-item expanded "><a href="../../konfigurasi/uom.html"><strong aria-hidden="true">3.2.</strong> UoM</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/uom/penjelasan.html"><strong aria-hidden="true">3.2.1.</strong> Penjelasan</a></li><li class="chapter-item expanded "><a href="../../konfigurasi/uom/membuat-data-uom.html"><strong aria-hidden="true">3.2.2.</strong> Membuat Data UoM</a></li></ol></li><li class="chapter-item expanded "><a href="../../konfigurasi/product-category.html"><strong aria-hidden="true">3.3.</strong> Product Category</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/product-category/penjelasan.html"><strong aria-hidden="true">3.3.1.</strong> Penjelasan</a></li><li class="chapter-item expanded "><a href="../../konfigurasi/product-category/membuat-data-product-category.html"><strong aria-hidden="true">3.3.2.</strong> Membuat Data Product Category</a></li></ol></li><li class="chapter-item expanded "><a href="../../konfigurasi/logistics-unit.html"><strong aria-hidden="true">3.4.</strong> Logistics Unit</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/logistics-unit/penjelasan.html"><strong aria-hidden="true">3.4.1.</strong> Penjelasan</a></li><li class="chapter-item expanded "><a href="../../konfigurasi/logistics-unit/membuat-data-logistic-unit.html"><strong aria-hidden="true">3.4.2.</strong> Membuat Data Logistics Unit</a></li></ol></li><li class="chapter-item expanded "><a href="../../konfigurasi/product-brand.html"><strong aria-hidden="true">3.5.</strong> Product Brand</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/product-brand/penjelasan.html"><strong aria-hidden="true">3.5.1.</strong> Penjelasan</a></li><li class="chapter-item expanded "><a href="../../konfigurasi/product-brand/membuat-data-product-brand.html"><strong aria-hidden="true">3.5.2.</strong> Membuat Data Product Brand</a></li></ol></li><li class="chapter-item expanded "><a href="../../konfigurasi/public-product-category.html"><strong aria-hidden="true">3.6.</strong> Public Product Category</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/public-product-category/penjelasan.html"><strong aria-hidden="true">3.6.1.</strong> Penjelasan</a></li><li class="chapter-item expanded "><a href="../../konfigurasi/public-product-category/membuat-data-public-product-category.html"><strong aria-hidden="true">3.6.2.</strong> Membuat Data Public Product Category</a></li></ol></li><li class="chapter-item expanded "><a href="../../konfigurasi/pricelist-type.html"><strong aria-hidden="true">3.7.</strong> Pricelist Type</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/pricelist-type/penjelasan.html"><strong aria-hidden="true">3.7.1.</strong> Penjelasan</a></li><li class="chapter-item expanded "><a href="../../konfigurasi/pricelist-type/membuat-data-pricelist-type.html"><strong aria-hidden="true">3.7.2.</strong> Membuat Data Pricelist Type</a></li></ol></li><li class="chapter-item expanded "><a href="../../konfigurasi/pricelist-version.html"><strong aria-hidden="true">3.8.</strong> Pricelist Version</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/pricelist-version/penjelasan.html"><strong aria-hidden="true">3.8.1.</strong> Penjelasan</a></li><li class="chapter-item expanded "><a href="../../konfigurasi/pricelist-version/membuat-data-pricelist-version.html"><strong aria-hidden="true">3.8.2.</strong> Membuat Data Pricelist Version</a></li></ol></li><li class="chapter-item expanded "><a href="../../konfigurasi/hazard-pictogram.html"><strong aria-hidden="true">3.9.</strong> Hazard Pictogram</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/hazard-pictogram/penjelasan.html"><strong aria-hidden="true">3.9.1.</strong> Penjelasan</a></li><li class="chapter-item expanded "><a href="../../konfigurasi/hazard-pictogram/membuat-data-hazard-pictogram.html"><strong aria-hidden="true">3.9.2.</strong> Membuat Data Hazard Pictogram</a></li></ol></li><li class="chapter-item expanded "><a href="../../konfigurasi/hazard-precautionary-statement.html"><strong aria-hidden="true">3.10.</strong> Hazard Precautionary Statement</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/hazard-precautionary-statement/penjelasan.html"><strong aria-hidden="true">3.10.1.</strong> Penjelasan</a></li><li class="chapter-item expanded "><a href="../../konfigurasi/hazard-precautionary-statement/membuat-data-hazard-precautionary-statement.html"><strong aria-hidden="true">3.10.2.</strong> Membuat Data Hazard Precautionary Statement</a></li></ol></li><li class="chapter-item expanded "><a href="../../konfigurasi/hazard-statement.html"><strong aria-hidden="true">3.11.</strong> Hazard Statement</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/hazard-statement/penjelasan.html"><strong aria-hidden="true">3.11.1.</strong> Penjelasan</a></li><li class="chapter-item expanded "><a href="../../konfigurasi/hazard-statement/membuat-data-hazard-statement.html" class="active"><strong aria-hidden="true">3.11.2.</strong> Membuat Data Hazard Statement</a></li></ol></li><li class="chapter-item expanded "><a href="../../konfigurasi/ec-number-category.html"><strong aria-hidden="true">3.12.</strong> EC Number Category</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/ec-number-category/penjelasan.html"><strong aria-hidden="true">3.12.1.</strong> Penjelasan</a></li><li class="chapter-item expanded "><a href="../../konfigurasi/ec-number-category/membuat-data-ec-number-category.html"><strong aria-hidden="true">3.12.2.</strong> Membuat Data EC Number Category</a></li></ol></li><li class="chapter-item expanded "><a href="../../konfigurasi/ec-number.html"><strong aria-hidden="true">3.13.</strong> EC Number</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/ec-number/penjelasan.html"><strong aria-hidden="true">3.13.1.</strong> Penjelasan</a></li><li class="chapter-item expanded "><a href="../../konfigurasi/ec-number/membuat-data-ec-number.html"><strong aria-hidden="true">3.13.2.</strong> Membuat Data EC Number</a></li></ol></li><li class="chapter-item expanded "><a href="../../konfigurasi/cas-registry.html"><strong aria-hidden="true">3.14.</strong> CAS Registry</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/cas-registry/penjelasan.html"><strong aria-hidden="true">3.14.1.</strong> Penjelasan</a></li><li class="chapter-item expanded "><a href="../../konfigurasi/cas-registry/membuat-data-cas-registry.html"><strong aria-hidden="true">3.14.2.</strong> Membuat Data CAS Registry</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
                 
-                <div id="menu-bar" class="menu-bar">
-                    <div id="menu-bar-sticky-container">
-                        <div class="left-buttons">
-                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                                <i class="fa fa-bars"></i>
-                            </button>
-                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                                <i class="fa fa-paint-brush"></i>
-                            </button>
-                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                            </ul>
-                            
-                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                                <i class="fa fa-search"></i>
-                            </button>
-                            
-                        </div>
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
 
-                        <h1 class="menu-title">Odoo - Product Management</h1> 
+                    <h1 class="menu-title">Odoo - Product Management</h1>
 
-                        <div class="right-buttons">
-                            <a href="../../print.html" title="Print this book" aria-label="Print this book">
-                                <i id="print-button" class="fa fa-print"></i>
-                            </a>
-                            
-                        </div>
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
                     </div>
                 </div>
 
@@ -140,7 +147,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#membuat-data-hazard-statement" id="membuat-data-hazard-statement"><h1>Membuat Data Hazard Statement</h1></a>
+                        <h1><a class="header" href="#membuat-data-hazard-statement" id="membuat-data-hazard-statement">Membuat Data Hazard Statement</a></h1>
 <ol>
 <li>Buka menu <strong>Product -&gt; Configuration -&gt; GHS Hazard Information -&gt; Hazard Statement</strong></li>
 <li>Klik tombol <strong>Create</strong> pada bagian atas-kiri form.</li>
@@ -178,13 +185,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a href="../../konfigurasi/hazard-statement/penjelasan.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../konfigurasi/hazard-statement/penjelasan.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a href="../../konfigurasi/ec-number-category.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../../konfigurasi/ec-number-category.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
@@ -194,6 +201,14 @@
 
         
 
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
         
 
         
